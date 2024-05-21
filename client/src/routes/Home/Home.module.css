@@ -1,0 +1,12 @@
+.header {
+    background-image: url(./../../assets/homepage-header-gradient.svg);
+    background-size: cover; /* or 'contain' or other values */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar_font {
+    color: #fff;
+}

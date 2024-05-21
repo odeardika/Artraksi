@@ -1,0 +1,17 @@
+.login_text {
+    margin: 0;
+    padding: 0.5rem 2rem;
+
+}
+.button_container{
+    color: white;
+    border: solid;
+    border-color: white;
+    border-radius: 1rem;
+}
+
+.button_container:hover{
+    color: #184A48;
+    background-color: white;
+    border-radius: 1rem;
+}

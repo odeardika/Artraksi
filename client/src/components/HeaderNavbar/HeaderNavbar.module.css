@@ -1,0 +1,46 @@
+a {
+    
+}
+
+.navbar_text {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.navbar_text:hover{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: #184A48;
+}
+
+.dropdown_text a{
+    text-decoration: none;
+    padding-left: 1rem;
+    color: #184A48;
+    font-size: 1.5rem;
+}
+
+.dropdown_text:hover {
+    background-color: #184a4815;
+}
+
+.header_container{
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
