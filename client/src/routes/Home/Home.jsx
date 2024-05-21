@@ -11,7 +11,10 @@ export default function Home() {
         <nav className={styles.header_navbar}>
           <HeaderNavbar/>
         </nav>
+        <h1 className={styles.h1}>Temukan Kesenian di Yogyakarta</h1>
+        <h2 className={styles.h2}>Artraksi telah menyediakan berbagai informasi seputar kesenia di daerah Yogyakarta</h2>
       </header>
+
       {/* Show MVP section */}
       <section>
         {/* for article */}
