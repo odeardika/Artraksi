@@ -3,6 +3,24 @@ import styles from "./Home.module.css";
 import HeaderNavbar from "../../components/HeaderNavbar/HeaderNavbar";
 import articleMVP from "../../assets/homepage-article.svg";
 import komunitasMVP from "../../assets/homepage-komunitas.svg"
+import ArticleCard from "../../components/ArticleCard/ArticleCard";
+import ComunitySectionImg from '../../assets/homepage-comunity.png'
+import ComunityInfoCard from "../../components/ComunityInfoCard.jsx/ComunityInfoCard";
+
+const articleList = [
+  {
+    id : 0,
+    by : "Atraksi", 
+    title : "Tari Bedhaya: Keanggunan Sakral dari Keraton Yogyakarta", 
+    img : "",
+    content : [
+      {
+        text : "Tari Bedhaya adalah salah satu bentuk tarian klasik Jawa yang berasal dari Keraton Yogyakarta. Tarian ini tidak hanya dikenal karena keindahan gerakannya, tetapi juga karena nilai-nilai spiritual dan filosofis yang terkandung di dalamnya. Tari Bedhaya adalah representasi sempurna dari harmoni, kesucian, dan keanggunan yang menjadi bagian integral dari budaya Jawa.", 
+        type : "p"
+      },  
+    ]
+  }
+];
 
 
 export default function Home() {
@@ -40,10 +58,34 @@ export default function Home() {
       </section>
 
       {/* Populer Article */}
-      <section className={styles}></section>
+      <section className={styles.article_section}>
+        <h2>Artikel <span>Terpopuler</span></h2>
+        <div className={styles.list_article}>
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+        </div>
+      </section>
+
+      {/* Komunitas */}
+      <section className={styles.komunitas_section}>
+        <div className={styles.komunitas_detail_container}>
+          <h2>Lebih dekat dengan  Pegiat Seni Pertunjukan <span>Yogyakarta</span></h2>
+          <div className={styles.komunitas_detail}>
+            <ComunityInfoCard index={0}/>
+            <ComunityInfoCard index={1}/>
+            <ComunityInfoCard index={2}/>
+          </div>
+        </div>
+          <img src={ComunitySectionImg} alt="" />
+      </section>
 
       {/* Blog Preview  */}
-      <section></section>
+      <section className={styles.blog_section}>
+      </section>
 
       {/* Masukan Penggunan */}
       <section></section>

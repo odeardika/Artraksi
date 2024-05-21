@@ -63,7 +63,7 @@
 }
 
 .komunitas_desc {
-    padding-right: 29rem;
+    padding-right: 20rem;
 }
 
 .mvp_desc .button {
@@ -75,4 +75,54 @@
     background-color: #65CCB7;
     border-color: #65CCB7;
     border-radius: 1rem;
+}
+
+.article_section {
+    background-color: #EDF3F4;
+    padding-bottom: 5rem;
+}
+
+.article_section h2 {
+    padding: 5rem 5rem;
+    color: #000;
+    font-weight: 800;
+    font-size: 40px;
+    margin: 0;
+}
+
+.article_section h2 span {
+    color: #3D7576;
+}
+
+.list_article{
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.komunitas_section{
+    padding: 5rem 5rem;
+    background: #fff;
+    display: flex;
+}
+
+.komunitas_detail_container h2{
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.komunitas_detail_container h2 span {
+    color: #3D7576;
+}
+
+.komunitas_detail{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.blog_section{
+    
 }
