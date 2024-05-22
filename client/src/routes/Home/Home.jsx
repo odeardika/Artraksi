@@ -13,6 +13,7 @@ import blog2 from "../../assets/blog/2.png";
 import user0 from "../../assets/user/0.png";
 import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
+import FeedbackCard from "../../components/FeedbackCard/FeedbackCard";
 
 const articleList = [
   {
@@ -68,6 +69,11 @@ const blog = [
   },
 ]
 
+const userFeedback = [
+  {id : 0, username : "Alan Garza", content : "Website ini memberikan informasi yang sangat lengkap tentang berbagai kebudayaan di Indonesia. Saya jadi bisa lebih mengenal dan menghargai keberagaman budaya kita.", img : user0, rate : 5},
+  {id : 1, username : "Stephen Matthews", content : "Saya menyukai bagaimana navigasinya sangat intuitif. Saya dengan mudah bisa menemukan artikel, acara, dan komunitas yang saya cari.", img : user1 , rate : 4},
+  {id : 2, username : "Bob Alexander", content : "Desain website ini sangat menarik! Saya suka bagaimana gambar-gambar budaya ditampilkan dengan cantik di seluruh halaman.", img : user2, rate : 4.5},
+]
 
 export default function Home() {
   return (
@@ -138,7 +144,12 @@ export default function Home() {
       </section>
 
       {/* Masukan Penggunan */}
-      <section></section>
+      <section className={styles.feedback}>
+        <h2>Masukan dari Pengguna</h2>
+        <div className={styles.feedback_container}>
+          {userFeedback.map(feedback => <FeedbackCard key={feedback.id} rate={feedback.rate} props={feedback}/>)}
+        </div>
+      </section>
 
       <footer></footer>
     </>
