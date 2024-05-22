@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home.jsx";
-import Login from "./routes/Login.jsx";
-import Regis from "./routes/Regis.jsx";
+import Login from "./routes/loginregis/Login.jsx";
+import Regis from "./routes/loginregis/Regis.jsx";
 import ComunityPage from "./routes/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage.jsx";
