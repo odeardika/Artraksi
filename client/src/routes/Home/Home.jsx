@@ -15,21 +15,6 @@ import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
 import FeedbackCard from "../../components/FeedbackCard/FeedbackCard";
 
-const articleList = [
-  {
-    id : 0,
-    by : "Atraksi", 
-    title : "Tari Bedhaya: Keanggunan Sakral dari Keraton Yogyakarta", 
-    img : "",
-    content : [
-      {
-        text : "Tari Bedhaya adalah salah satu bentuk tarian klasik Jawa yang berasal dari Keraton Yogyakarta. Tarian ini tidak hanya dikenal karena keindahan gerakannya, tetapi juga karena nilai-nilai spiritual dan filosofis yang terkandung di dalamnya. Tari Bedhaya adalah representasi sempurna dari harmoni, kesucian, dan keanggunan yang menjadi bagian integral dari budaya Jawa.", 
-        type : "p"
-      },  
-    ]
-  }
-];
-
 const blog = [
   {
     id : 0,
@@ -83,8 +68,10 @@ export default function Home() {
         <nav className={styles.header_navbar}>
           <HeaderNavbar/>
         </nav>
-        <h1 className={styles.h1}>Temukan Kesenian di Yogyakarta</h1>
-        <h2 className={styles.h2}>Artraksi telah menyediakan berbagai informasi seputar kesenia di daerah Yogyakarta</h2>
+        <div className={styles.header_info}>
+          <h1 className={styles.h1}>Temukan Kesenian di Yogyakarta</h1>
+          <h2 className={styles.h2}>Artraksi telah menyediakan berbagai informasi seputar kesenia di daerah Yogyakarta</h2>
+        </div>
       </header>
 
       {/* Show MVP section */}

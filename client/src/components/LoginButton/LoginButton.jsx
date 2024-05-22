@@ -5,7 +5,7 @@ export default function LoginButton() {
   return (
     <>
       <div className={styles.button_container}>
-        <p className={styles.login_text}>Login</p>
+        <p className={styles.login_text}><a href="./login">Login</a></p>
       </div>
     </>
   )
