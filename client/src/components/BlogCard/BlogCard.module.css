@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.container{
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user_section{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0 0 0.5rem;
+    margin: 0.5rem 0rem;
+}
+.userprofile_container{
+    width: 36px;
+    height: 36px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.user_profile{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user_username{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.follow {
+    color: #12B8FF;
+    font-size: 20px;
+}
+
+.img_container{
+    width: 400px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user_interaction{
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.interaction_icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 28px;
+}
+
+.left {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.right{
+    font-size: 18px;
+}
+
+.like {
+    font-size: 18px;
+    color: rgb(132, 132, 132);
+    margin: 0;
+}
+
+.blog_detail{
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content {
+    font-size: 16px;
+    color: rgb(140, 140, 140);
+    display: -webkit-box;         /* Fallback for older browsers */
+      -webkit-box-orient: vertical; /* Fallback for older browsers */
+      -webkit-line-clamp: 4;        /* Specifies the number of lines to show */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-clamp: 4; 
+}
+
+.footer{
+    padding: 0 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(170, 170, 170);
+}
+
+.next {
+    font-size: 18px;
+    font-weight: 500;
+    color: #23766C;
+}
+
+.next_arrow {
+    font-family: "Inter";
+    font-weight: 500;
+}
