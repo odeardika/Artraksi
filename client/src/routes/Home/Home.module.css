@@ -124,5 +124,21 @@
 }
 
 .blog_section{
-    
+    padding: 5rem 5rem;
+    background-color: #EDF3F4;
+}
+
+.blog_section h2{
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.blog_section h2 span{
+    color: #3D7576;
+}
+
+.blog_container{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
 }

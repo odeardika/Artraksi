@@ -6,6 +6,13 @@ import komunitasMVP from "../../assets/homepage-komunitas.svg"
 import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import ComunitySectionImg from '../../assets/homepage-comunity.png'
 import ComunityInfoCard from "../../components/ComunityInfoCard.jsx/ComunityInfoCard";
+import BlogCard from "../../components/BlogCard/BlogCard";
+import blog0 from "../../assets/blog/0.png";
+import blog1 from "../../assets/blog/1.png";
+import blog2 from "../../assets/blog/2.png";
+import user0 from "../../assets/user/0.png";
+import user1 from "../../assets/user/1.png";
+import user2 from "../../assets/user/2.png";
 
 const articleList = [
   {
@@ -21,6 +28,45 @@ const articleList = [
     ]
   }
 ];
+
+const blog = [
+  {
+    id : 0,
+    by : ["Alan Garza", user0],
+    title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
+    img : blog0,
+    content : [
+      {
+        text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
+        type : "p"
+      }
+    ]
+  },
+  {
+    id : 1,
+    by : ["Stephen Matthews", user1],
+    title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
+    img : blog1,
+    content : [
+      {
+        text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
+        type : "p"
+      }
+    ]
+  },
+  {
+    id : 2,
+    by : ["Bob Alexander", user2],
+    title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
+    img : blog2,
+    content : [
+      {
+        text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
+        type : "p"
+      }
+    ]
+  },
+]
 
 
 export default function Home() {
@@ -85,6 +131,10 @@ export default function Home() {
 
       {/* Blog Preview  */}
       <section className={styles.blog_section}>
+        <h2>Dapatkan cerita terbaru dari <span>pengguna</span></h2>
+        <div className={styles.blog_container}>
+          {blog.map(blogItem => <BlogCard key={blogItem.id} props={blogItem}/>)}
+        </div>
       </section>
 
       {/* Masukan Penggunan */}
