@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./routes/Home.jsx";
+import Home from "./routes/Home/Home.jsx";
 import Login from "./routes/loginregis/Login.jsx";
 import Regis from "./routes/loginregis/Regis.jsx";
 import ComunityPage from "./routes/ComunityPage.jsx";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     path: "/kalender",
     element: <Calender />,
   },
+  {
+    path: "/tentang_kami",
+    element: <h1>Tentang Kami</h1>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
