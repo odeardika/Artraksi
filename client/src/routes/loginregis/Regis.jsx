@@ -1,4 +1,7 @@
 import React, { useState } from "react"
+import "./Style.css"
+import logo from "./aset/Logo.svg"
+import bgside from "./aset/bgawal.jpg"
 
 export default function Regis() {
 
@@ -29,63 +32,69 @@ export default function Regis() {
   }
   
   return (
+    <div className="pembungkus">
+      <div className="left-section">
+        <form onSubmit={handleSubmit}>
+          <div className="Auth-form-container">
+            <div className="logo">
+              <img src={logo} alt="logo ATRAKSI" />
+            </div>
+            <div className="text-center">
+              <p>Buat dulu</p>
+              <p>untuk menikmati layanan kami</p>
+            </div>
+            <div className="form-group mt-3">
+              <label>Nama</label>
+              <input
+                type="text"
+                className="form-control mt-1"
+                placeholder="Masukkan nama"
+              />
+            </div>
+            <div className="form-group mt-3">
+              <label>Email</label>
+              <input
+                type="email"
+                className="form-control mt-1"
+                placeholder="Masukkan email"
+              />
+            </div>
+            <div className="form-group mt-3">
+              <label>Password</label>
+              <input
+                type="password"
+                className="form-control mt-1"
+                placeholder="Masukkan password"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+            </div>
 
-    <form onSubmit={handleSubmit}>
-      <div className="Auth-form-container">
-        <div>
-          <img src="" alt="logo ATRAKSI" />
-        </div>
-        <div className="text-center">
-          <p>Buat dulu</p>
-          <p>untuk menikmati layanan kami</p>
-        </div>
-        <div className="form-group mt-3">
-          <label>Nama</label>
-          <input
-            type="text"
-            className="form-control mt-1"
-            placeholder="Masukkan nama"
-          />
-        </div>
-        <div className="form-group mt-3">
-          <label>Email</label>
-          <input
-            type="email"
-            className="form-control mt-1"
-            placeholder="Masukkan email"
-          />
-        </div>
-        <div className="form-group mt-3">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control mt-1"
-            placeholder="Masukkan password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </div>
-
-        <div className="form-group mt-3">
-          <label>Konfirmasi Password</label>
-          <input
-            type="password"
-            className="form-control mt-1"
-            placeholder="Masukkan ulang password"
-            value={confirmPassword}
-            onChange={handleConfirmPasswordChange}
-          />
-          {errorMessage && <p className="text-danger">{errorMessage}</p>}
-        </div>
-        <div className="d-grid gap-2 mt-3">
-        <button type="submit" className="btn btn-primary">Buat Akun</button>
-        </div>
-        <span className="link-primary" onClick=''>
-          Sudah mempunyai akun?{" "}
-          Masuk disini
-          </span>
+            <div className="form-group mt-3">
+              <label>Konfirmasi Password</label>
+              <input
+                type="password"
+                className="form-control mt-1"
+                placeholder="Masukkan ulang password"
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+              />
+              {errorMessage && <p className="text-danger">{errorMessage}</p>}
+            </div>
+            <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">Buat Akun</button>
+            </div>
+            <span className="link" onClick=''>
+              Sudah mempunyai akun? {""}
+              <a href="login">Masuk disini</a>
+            </span>
+          </div>
+        </form>
       </div>
-    </form>
+      <div className="right-section">
+        <img className="sidebg" src={bgside} alt="side background" />
+      </div>
+    </div> 
   )
 }
 
