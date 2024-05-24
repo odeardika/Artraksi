@@ -12,6 +12,8 @@ import Calender from "./routes/Calender.jsx";
 
 import './dist/css/main.css'
 import FooterComponent from "./components/FooterComponent.jsx";
+import KomunitasPage from "./pages/KomunitasPage.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -48,6 +50,13 @@ const router = createBrowserRouter([
     path: "/components",
     element: <FooterComponent />,
   },
+  {
+    path: "/pages",
+    element: <KomunitasPage />,
+  },
+
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
