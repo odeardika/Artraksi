@@ -50,6 +50,7 @@ const router = createBrowserRouter([
     path: "/components",
     element: <FooterComponent />,
   },
+  {
     path: "/tentang_kami",
     element: <h1>Tentang Kami</h1>
   }

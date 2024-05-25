@@ -9,7 +9,7 @@ const FooterComponent = () => {
         <Row>
           <Col>
             <img src={logo} alt="Logo" />
-            <p className="footer-text">Lestarikan Seni Melalui Digitalisasi</p>
+            <p className="footer-text"> Lestarikan Seni Melalui Digitalisasi </p>
             <ul className="menus">
               <li><a href="#">Beranda</a></li>
               <li><a href="#">Artikel</a></li>
@@ -26,10 +26,6 @@ const FooterComponent = () => {
     </p>
   </Col>
 </Row>
-
-
-
-
       </Container>
     </footer>
   );
