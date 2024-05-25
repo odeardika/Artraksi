@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 59px;
+    align-items: center;
+}
+.detail {
+    font-weight: 400;
+    color: #acacac;
+    padding: 0;
+    padding-right: 10rem;
+}
+
+.title{
+    font-weight: 600;
+    color: #000;
+    font-size: 26px;
+}
+
+ 
