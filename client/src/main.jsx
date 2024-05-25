@@ -11,6 +11,12 @@ import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 
+
+import './dist/css/main.css'
+import FooterComponent from "./components/FooterComponent.jsx";
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +47,9 @@ const router = createBrowserRouter([
     element: <Calender />,
   },
   {
+    path: "/components",
+    element: <FooterComponent />,
+  },
     path: "/tentang_kami",
     element: <h1>Tentang Kami</h1>
   }
