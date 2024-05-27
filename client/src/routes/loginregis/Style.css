@@ -1,14 +1,19 @@
 
   .pembungkus {
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 45% 55%;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    background-size: cover; 
+    background-position: center;
   }
 
   .left-section {
     padding-right: 50px;
-    padding-left: 50px;
+    padding-left: 120px;
   }
   
   .logo {
@@ -68,10 +73,11 @@
   }
 
   .right-section{
-    padding-left: 15px;
+    position: absolute; 
+    left: 50%; 
   }
   .sidebg{
   width: 100%; 
-  height: auto; 
+  height: 100%; 
   object-fit: cover;
   }
