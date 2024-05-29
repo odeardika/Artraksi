@@ -4,7 +4,6 @@ import logo from "./aset/Logo.svg"
 import bgside from "./aset/bgawal.jpg"
 
 export default function Login() {
-
   return (
     <div className="pembungkus">
       <div className="left-section">
@@ -45,4 +44,3 @@ export default function Login() {
     </div>
   )
 }
-

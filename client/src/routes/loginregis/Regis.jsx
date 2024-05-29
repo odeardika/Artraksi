@@ -81,18 +81,16 @@ export default function Regis() {
               />
               {errorMessage && <p className="text-danger">{errorMessage}</p>}
             </div>
-            <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">Buat Akun</button>
-            </div>
-            <span className="link" onClick=''>
-              Sudah mempunyai akun? {""}
-              <a href="login">Masuk disini</a>
-            </span>
+                <div className="text gap-2 mt-3">
+                  <button type="submit" className="btn">Buat Akun</button>
+                </div>
+                <span className="link" onClick=''>
+                  Sudah mempunyai akun? {""}
+                  <a href="login">Masuk disini</a>
+                </span>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-      <div className="right-section">
-        <img className="sidebg" src={bgside} alt="side background" />
       </div>
     </div> 
   )
