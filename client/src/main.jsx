@@ -10,6 +10,7 @@ import ComunityPage from "./routes/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
+import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 
 
 import './dist/css/main.css'
@@ -51,8 +52,8 @@ const router = createBrowserRouter([
     element: <FooterComponent />,
   },
   {
-    path: "/tentang_kami",
-    element: <h1>Tentang Kami</h1>
+    path: "/routes/tentangkami",
+    element: <TentangKamiPage />
   }
 ]);
 

@@ -1,0 +1,171 @@
+/* STYLE HERO IMG */
+.tentangpage .hero {
+    background-image: url("../../assets/tentang_kami.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    min-height: 100vh; /* Tinggi minimum 100vh */
+}
+
+.tentangpage .hero h1 {
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.tentangpage .hero h1 .highlight {
+    font-size: 100px;
+    margin-left: 80px;
+    position: relative;
+    top: 20px; /* Geser sedikit ke bawah */
+}
+
+/* Media Queries untuk Responsivitas */
+@media screen and (max-width: 992px) {
+    .tentangpage .hero {
+        background-size: cover; /* Pastikan gambar tidak terpotong */
+        padding-top: 0; /* Hapus padding atas */
+        padding-bottom: 0; /* Hapus padding bawah */
+        min-height: 58vh; /* Ubah tinggi minimum elemen hero */
+       
+    }
+
+    .tentangpage .hero h1 {
+        font-size: 70px;
+        padding-top: 150px;
+    }
+
+    .tentangpage .hero h1 .highlight {
+        font-size: 80px;
+        margin-left: 50px;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tentangpage .hero {
+        background-size: cover; /* Pastikan gambar tidak terpotong */
+        padding-top: 0; /* Hapus padding atas */
+        padding-bottom: 0; /* Hapus padding bawah */
+       
+        min-height: 45vh; /* Ubah tinggi minimum elemen hero */
+    }
+
+    .tentangpage .hero h1 {
+        font-size: 50px;
+        padding-top: 50px;
+    }
+
+    .tentangpage .hero h1 .highlight {
+        font-size: 50px;
+        margin-left: 40px;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tentangpage .hero {
+        background-size: cover; /* Pastikan gambar tidak terpotong */
+        padding-top: 0; /* Hapus padding atas */
+        padding-bottom: 0; /* Hapus padding bawah */
+     
+        min-height: 40vh; /* Rendahkan tinggi minimum elemen hero lebih lanjut */
+    }
+
+    .tentangpage .hero h1 {
+        font-size: 40px;
+        padding-top: 45px;
+    }
+
+    .tentangpage .hero h1 .highlight {
+        font-size: 40px;
+        margin-left: 30px;
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .tentangpage .hero {
+        background-size: cover; /* Pastikan gambar tidak terpotong */
+        padding-top: 0; /* Hapus padding atas */
+        padding-bottom: 0; /* Hapus padding bawah */
+        height: 30vh; /* Rendahkan tinggi elemen hero lebih lanjut */
+        min-height: 30vh; /* Rendahkan tinggi minimum elemen hero lebih lanjut */
+    }
+
+    .tentangpage .hero h1 {
+        font-size: 35px;
+    }
+
+    .tentangpage .hero h1 .highlight {
+        font-size: 35px;
+        margin-left: 20px;
+        top: 0;
+    }
+}
+/* STYLE HERO IMG END */
+
+
+
+/* STYLE HASTRA DEWANDRA PAGE */
+.tentangpage .hastra{
+    background:#226663;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.tentangpage .hastra h1{
+    color: #fff;
+}
+
+.tentangpage .hastra p{
+    color: #fff;
+    padding-top: 40px;
+    line-height: 1.7;
+}
+
+
+
+/* STYLE HASTRA DEWANDRA PAGE END */
+
+
+/* STYLE FILOSOFI PAGE */
+.tentangpage .filosofi{
+    background: #fff;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.tentangpage .filosofi h1{
+    color: #47807D;
+}
+
+
+.tentangpage .filosofi p{
+    padding-top: 40px;
+    line-height: 1.7;
+    color: #284F4D;
+}
+
+
+/* STYLE FILOSOFI PAGE END */
+
+/* STYLE TUJUAN PAGE */
+.tentangpage .tujuan{
+    background:#fff;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.tentangpage .tujuan h1{
+    color: #47807D;
+}
+
+.tentangpage .tujuan p{
+    padding-top: 40px;
+    line-height: 1.7;
+    color: #284F4D;
+}
+
+/* STYLE TUJUAN PAGE END */
