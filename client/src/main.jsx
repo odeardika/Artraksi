@@ -12,6 +12,12 @@ import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 import DetailComunity from "./routes/comunity/DetailComunity.jsx";
 
+
+import './dist/css/main.css'
+import FooterComponent from "./components/FooterComponent.jsx";
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/routes/comunity",
     element: < DetailComunity />,
+  },
+  {
+    path: "/components",
+    element: <FooterComponent />,
   },
   {
     path: "/tentang_kami",
