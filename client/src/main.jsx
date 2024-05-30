@@ -10,6 +10,7 @@ import ComunityPage from "./routes/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
+import DetailComunity from "./routes/comunity/DetailComunity.jsx";
 
 
 import './dist/css/main.css'
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/kalender",
     element: <Calender />,
+  },
+  {
+    path: "/routes/comunity",
+    element: < DetailComunity />,
   },
   {
     path: "/components",
