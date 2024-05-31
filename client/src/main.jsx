@@ -36,6 +36,10 @@ const router = createBrowserRouter([
     element: <ComunityPage />,
   },
   {
+    path: "/komunitas/:id",
+    element: <DetailComunity />,
+  },
+  {
     path: "/blog",
     element: <BlogPage />,
   },
@@ -46,14 +50,6 @@ const router = createBrowserRouter([
   {
     path: "/kalender",
     element: <Calender />,
-  },
-  {
-    path: "/routes/comunity",
-    element: < DetailComunity />,
-  },
-  {
-    path: "/components",
-    element: <FooterComponent />,
   },
   {
     path: "/tentang_kami",

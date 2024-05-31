@@ -2,6 +2,7 @@ import { Container, Row, Col,  } from "react-bootstrap";
 import ukjgsugm from "../../assets/comunity/detail/ukjgs_frm.jpg";
 import firman from "../../assets/comunity/detail/firmansya.jpg";
 import { semuaKelas, pementasan, dibaliklayar } from "./index";
+import { useParams } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -21,6 +22,8 @@ import { Pagination, Navigation } from 'swiper/modules';
 import './main.css';
 
 const DetailComunity = () => {
+  const { id } = useParams();
+  console.log(id);
   return (
     <div className="detailpage">
       <header className="w-100 min-vh-100 d-flex align-items-center">
