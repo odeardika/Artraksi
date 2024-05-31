@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 import { LayananPenitipan, dataswiper, faq } from "../data/index";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
+import axios from 'axios';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,12 +10,20 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import Selengkapnya from '../components/NextButton/Selengkapnya/Selengkapnya';
 
 const ComunityPage = () => {
+  // get communities data from backend
+  const [communities, setCommunities] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/communities`).then((response) => {
+      setCommunities(response.data);
+    });
+  }, []);
   return (
     <div className="komunitaspage">
         {/* headerpage */}
-
 
         <div className="komunitas w-100 min-vh-100">
             <Container>
@@ -25,22 +33,21 @@ const ComunityPage = () => {
                     </Col>
                 </Row>
                 <Row>
-                    {LayananPenitipan.map((komunitas) => {
+                    {communities.map((komunitas) => {
                         return(
                             <Col key={komunitas.id} className="shadow-sm">
-                            <img src={komunitas.image} alt="" className="w-100 mb-3 rounded-top" />
+                            <img src={`${import.meta.env.VITE_SERVER_URL}/${komunitas.thumbnail_img}`} alt="" className="w-100 mb-3 rounded-top" />
                             <div className=" d-flex justify-content-between align-items-center px-3 pb-3">
                                 <div className="logo">
-                                    <img src={komunitas.images} alt="small image" />
+                                    <img src={`${import.meta.env.VITE_SERVER_URL}/${komunitas.logo_img}`} alt="small image" />
                                 </div>
                                 <div className="ms-2">
-                                    <h5 className="mb-0 px-3 fw-bold">{komunitas.title}</h5>
-                                    <p className="mb-0 px-3">{komunitas.desk}</p>
+                                    <h5 className="mb-0 px-3 fw-bold">{komunitas.comunity_name}</h5>
+                                    <p className="mb-0 px-3">{komunitas.comunity_description}</p>
                                 </div>
                             </div>
                             <div>
-                                <button className="mb-5 btn btn-transparent fw-reguler">
-                                {komunitas.next} <i className="fa-solid fa-arrow-right ms-1"></i></button>
+                              <Selengkapnya href={'/#'}/>
                             </div>
                         </Col>    
                         );

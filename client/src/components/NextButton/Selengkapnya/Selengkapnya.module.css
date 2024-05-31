@@ -1,0 +1,14 @@
+.next {
+    font-size: 18px;
+    font-weight: 500;
+    color: #23766C;
+}
+
+.next_arrow {
+    font-family: "Inter";
+    font-weight: 500;
+}
+
+.next_arrow:hover {
+    color: #23766C;
+}
