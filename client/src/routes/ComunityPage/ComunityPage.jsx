@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Accordion } from "react-bootstrap";
-import { LayananPenitipan, dataswiper, faq } from "../data/index";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { faq } from "../../data/index";
+import { Swiper } from 'swiper/react';
 import axios from 'axios';
+import user0 from "../../assets/user/0.png";
+import user1 from "../../assets/user/1.png";
+import user2 from "../../assets/user/2.png";
+import FeedbackCard from '../../components/FeedbackCard/FeedbackCard';
+import styles from './ComunityPage.module.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,7 +15,13 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
-import Selengkapnya from '../components/NextButton/Selengkapnya/Selengkapnya';
+import Selengkapnya from '../../components/NextButton/Selengkapnya/Selengkapnya';
+
+const userFeedback = [
+  {id : 0, username : "Alan Garza", content : "Website ini memberikan informasi yang sangat lengkap tentang berbagai kebudayaan di Indonesia. Saya jadi bisa lebih mengenal dan menghargai keberagaman budaya kita.", img : user0, rate : 5},
+  {id : 1, username : "Stephen Matthews", content : "Saya menyukai bagaimana navigasinya sangat intuitif. Saya dengan mudah bisa menemukan artikel, acara, dan komunitas yang saya cari.", img : user1 , rate : 4},
+  {id : 2, username : "Bob Alexander", content : "Desain website ini sangat menarik! Saya suka bagaimana gambar-gambar budaya ditampilkan dengan cantik di seluruh halaman.", img : user2, rate : 4.5},
+]
 
 const ComunityPage = () => {
   // get communities data from backend
@@ -61,7 +72,7 @@ const ComunityPage = () => {
                 <Row>
                     <Col>
                     <h1 className="text-center fw-bold">Pendapat Pengguna</h1>
-                    <p className="text-center mb-5 fw-semibold">Bagaiman pendapat pengguna yang sudah berintraksi dengan komunitas</p>
+                    <p className="text-center mb-5 fw-semibold">Bagaimana pendapat pengguna yang sudah berintraksi dengan komunitas</p>
                     </Col>
                 </Row>
                 
@@ -94,23 +105,11 @@ const ComunityPage = () => {
         className="mySwiper"
       >
 
-        {dataswiper.map((data) => {
-            return <SwiperSlide key={data.id} className="shadow-sm">
-              <p className="desc">{data.desc}</p>
-              <div className="people">
-                <img src={data.image} alt="" />
-                <div>
-                  <h5 className="mb-1">{data.name}</h5>
-                  <i className={data.star1}></i>  
-                  <i className={data.star2}></i>  
-                  <i className={data.star3}></i>  
-                  <i className={data.star4}></i>  
-                  <i className={data.star5}></i>  
-                </div>
-              </div>
-            </SwiperSlide>;
-            
-        })}
+      <section className={styles.feedback}>
+        <div className={styles.feedback_container}>
+          {userFeedback.map(feedback => <FeedbackCard key={feedback.id} rate={feedback.rate} props={feedback}/>)}
+        </div>
+      </section>
         
       </Swiper>
                 </Row>
@@ -146,7 +145,6 @@ const ComunityPage = () => {
           </Container>
         
         </div>
-
 
     </div>
   )

@@ -172,10 +172,15 @@ header{
     }
   }
   
+  .leader-profile-container{
+    
+  }
+
+
   .rounded-image {
     border-radius: 50%;
-    width: 100%; /* Memastikan gambar memenuhi elemen induknya */
-    height: auto; /* Memastikan rasio aspek gambar */
+    width: 400px; /* Memastikan gambar memenuhi elemen induknya */
+    height: 400px; /* Memastikan rasio aspek gambar */
   }
   
   /* STYLE NEW CONTENT SECTION END */

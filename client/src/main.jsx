@@ -6,15 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home/Home.jsx";
 import Login from "./routes/loginregis/Login.jsx";
 import Regis from "./routes/loginregis/Regis.jsx";
-import ComunityPage from "./routes/ComunityPage.jsx";
+import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
-import DetailComunity from "./routes/comunity/DetailComunity.jsx";
-
-
+import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import './dist/css/main.css'
-import FooterComponent from "./components/FooterComponent.jsx";
 
 
 
