@@ -58,7 +58,7 @@ const ComunityPage = () => {
                                 </div>
                             </div>
                             <div>
-                              <Selengkapnya href={'/#'}/>
+                              <Selengkapnya href={`/komunitas/${komunitas.id}`}/>
                             </div>
                         </Col>    
                         );
