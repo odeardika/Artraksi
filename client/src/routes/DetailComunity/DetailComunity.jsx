@@ -1,7 +1,9 @@
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col,  } from "react-bootstrap";
-import ukjgsugm from "../../assets/comunity/detail/ukjgs_frm.jpg";
-import firman from "../../assets/comunity/detail/firmansya.jpg";
-import { semuaKelas, pementasan, dibaliklayar } from "./index";
+import axios from "axios";
+import FooterComponent from "../../components/FooterComponent";
+
+import { useParams } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,8 +11,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
@@ -21,20 +21,40 @@ import { Pagination, Navigation } from 'swiper/modules';
 import './main.css';
 
 const DetailComunity = () => {
+  const { id } = useParams();
+  const backendURL = import.meta.env.VITE_SERVER_URL;
+  const [community, setCommunity] = useState([]);
+  const [leader, setLeader] = useState([]);
+  const [activities, setActivities] = useState([]);
+  const [performances, setPerformances] = useState([]);
+  const [bts, setBts] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${backendURL}/communities/${id}`).then((response) => {
+      setCommunity(response.data);
+      setLeader(response.data.leader);
+      setActivities(response.data.activities);
+      setPerformances(response.data.performanceGallery);
+      setBts(response.data.behindTheScenesGallery);
+      console.log(response.data.behindTheScenesGallery)
+    });
+  }, []);
+
+  console.log(id);
   return (
     <div className="detailpage">
       <header className="w-100 min-vh-100 d-flex align-items-center">
         <Container>
           <Row className="header-box d-flex align-item center">
             <Col lg="5 ">
-            <img src={ukjgsugm} alt="" />
+            <img src={`${backendURL}/${community.logo}`} alt="" />
             </Col>
             <Col lg="7" className="pt-lg-0 pt-5">
             <h1 className="mb-4">
-              UKJGS UGM
+              {community.name}
             </h1>
             <p className="mb-4">
-            UKJGS UGM atau Unit Kesenian Jawa Gaya Surakarta Universitas Gadjah Mada lahir  pada 19 Desember 1968 sebagai salah satu unit kegiatan mahasiswa yang menjadi wadah bagi mahasiswa Universitas Gadjah Mada yang ingin mengembangkan potensi diri dalam bidang seni tari, karawitan, dan pedhalangan. 
+              {community.description} 
             </p>
             </Col>
           </Row>
@@ -46,13 +66,13 @@ const DetailComunity = () => {
         <Container>
           <Row className="content-box d-flex align-items-center py-5">
             <Col lg="7" className="pt-lg-0 pt-0">
-              <h1 className="mb-4">Rossi Firmansyah</h1>
+              <h1 className="mb-4">{leader.name}</h1>
               <p className="mb-4">
-              Dia adalah ketua UKJGS UGM (Unit Kesenian Jawa Gaya Surakarta Universitas Gadjah Mada) yang berdedikasi tinggi dalam melestarikan dan memperkenalkan budaya Yogyakarta. Dengan pengalaman bertahun-tahun dalam seni tradisional, Rossi memimpin komunitas ini dengan semangat dan visi yang kuat untuk menginspirasi generasi muda agar mencintai dan menjaga warisan dan budaya.
+              {leader.description}
               </p>
             </Col>
             <Col lg="5 text-center">
-              <img src={firman} alt="" className="rounded-image" />
+                <img src={`${backendURL}/${leader.img}`} alt="" className="rounded-image" />
             </Col>
           </Row>
         </Container>
@@ -65,16 +85,14 @@ const DetailComunity = () => {
             </Col>
           </Row>
           <Row>
-            {semuaKelas.map((kegiatan) => {
+            {activities.map((activity) => {
               return(
-              <Col key={kegiatan.id}>
-                <img src={kegiatan.image} alt="" className="w-100 mb-2 rounded-top" />
+              <Col key={activity.id}>
+                <img src={`${backendURL}/${activity.activity_img}`} alt="" className="w-100 mb-2 rounded-top" />
                 <div className=" descrip mb-5 ">
-                <h5 className="title mb-1">{kegiatan.title}</h5>
-                 <p className="m-0">{kegiatan.price}</p>
+                <h5 className="title mb-1">{activity.activity_name}</h5>
+                 <p className="m-0">{activity.activity_description}</p>
                 </div>
-                  
-               
               </Col>
               );
             })}
@@ -102,11 +120,11 @@ const DetailComunity = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {pementasan.map((data) => {
+        {performances.map((data) => {
           return (
             <SwiperSlide key={data.id}>
               <div className="image ">
-                <img src={data.image} alt="" />
+                <img src={`${backendURL}/${data.img_url}`} alt="" />
               </div>
             </SwiperSlide>
           );
@@ -133,10 +151,10 @@ const DetailComunity = () => {
           modules={[Pagination, Navigation]}
           className="newSwiper"
         >
-          {dibaliklayar.map((data) => (
+          {bts.map((data) => (
             <SwiperSlide key={data.id} className="newSwiper-slide">
               <div className="new-image">
-                <img src={data.image} alt="" />
+                <img src={`${backendURL}/${data.img_url}`} alt="" />
               </div>
             </SwiperSlide>
           ))}
@@ -149,7 +167,8 @@ const DetailComunity = () => {
       </Row>
     </Container>
   </div>
-</div>
+  </div>
+  <FooterComponent />
 
    
      
