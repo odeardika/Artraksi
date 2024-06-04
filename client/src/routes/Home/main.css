@@ -1,0 +1,136 @@
+.artikel h3 {
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: #000;
+}
+
+.artikel p {
+    color: #787878;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.artikel .btn {
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: #65CCB7;
+    border-color: #65CCB7;
+    border-radius: 1rem;
+}
+
+.komunitas h3 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.komunitas p {
+    color: #787878;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.komunitas .btn {
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: #65CCB7;
+    border-color: #65CCB7;
+    border-radius: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .artikel h3,
+    .komunitas h3 {
+        font-size: 2rem;
+    }
+
+    .artikel p,
+    .komunitas p {
+        font-size: 1.3rem;
+    }
+
+    .artikel .btn,
+    .komunitas .btn {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 772px) {
+    .artikel h3,
+    .komunitas h3 {
+        font-size: 1.8rem;
+    }
+
+    .artikel p,
+    .komunitas p {
+        font-size: 1.2rem;
+    }
+
+    .artikel .btn,
+    .komunitas .btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .artikel h3,
+    .komunitas h3 {
+        font-size: 1.5rem;
+    }
+
+    .artikel p,
+    .komunitas p {
+        font-size: 1rem;
+    }
+
+    .artikel .btn,
+    .komunitas .btn {
+        font-size: 1rem;
+    }
+
+    .artikel img,
+    .komunitas img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 474px) {
+    .artikel h3,
+    .komunitas h3 {
+        font-size: 1.3rem;
+    }
+
+    .artikel p,
+    .komunitas p {
+        font-size: 0.9rem;
+    }
+
+    .artikel .btn,
+    .komunitas .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .artikel h3,
+    .komunitas h3 {
+        font-size: 1.1rem;
+    }
+
+    .artikel p,
+    .komunitas p {
+        font-size: 0.8rem;
+    }
+
+    .artikel .btn,
+    .komunitas .btn {
+        font-size: 0.8rem;
+    }
+}

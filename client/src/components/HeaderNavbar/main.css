@@ -1,0 +1,12 @@
+ .toglerr {
+    background-color: #05e4dc; 
+    color: #fff;
+    padding: 0.5rem; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+ }
+
+ .toglerr:hover, .toglerr:focus {
+    background-color: #fff; 
+    transform: scale(1.1); 
+    outline: none; 
+}

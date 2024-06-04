@@ -15,11 +15,12 @@ export default function ArticleCard() {
             <p className={styles.author_text}>By Tim Artraksi  | 22 jam lalu</p>
         </div>
         <div className={styles.article_detail}>
-          <h3>Tari Bedhaya: Keanggunan Sakral dari Keraton Yogyakarta</h3>
-          <p>Tari Bedhaya adalah salah satu bentuk tarian klasik Jawa yang berasal dari Keraton...</p>
-          <div>Selengkapnya <span>{'->'}</span></div>
+            <h3>Tari Bedhaya: Keanggunan Sakral dari Keraton Yogyakarta</h3>
+            <p>Tari Bedhaya adalah salah satu bentuk tarian klasik Jawa yang berasal dari Keraton...</p>
+            <div>Selengkapnya <span>{'->'}</span></div>
         </div>
     </div>
-    </>
+</>
+
   )
 }

@@ -1,79 +1,187 @@
 /* footer */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins", sans-serif;
-  }
-  
-  .footer {
-    /* Fallback for older browsers */
-    background: #FFFFFF;
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to left, #237662, #58af9f);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to left, #237662, #58af9f);
-    height: 41vh;
-    width: 100vw;
-    font-family: sans-serif;
-    padding-top: 40px;
-    color: #ffffff;
-  }
-  
-  .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .footer-content img {
-    line-height: 3rem;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer {
+  background: linear-gradient(to left, #237662, #58af9f);
+  height: 41vh;
+  width: 100vw;
+  padding-top: 40px;
+  color: #ffffff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content img {
+  line-height: 3rem;
+}
+
+.footer-content p {
+  min-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.menus {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.menus li {
+  margin: 0 10px;
+}
+
+.menus a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menus a:hover {
+  color: aqua;
+}
+
+.footer-hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90vw;
+  transform: translateX(-50vw);
+  left: 55%;
+  position: relative;
+}
+
+.copy {
+  margin-bottom: 10px;
+  transform: translateY(-5px);
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
   .footer-content p {
-    min-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
+    min-width: 80%;
   }
-  
-  .menus {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 1rem 0; /* Adjusted the margin bottom */
-  }
-  
-  .menus li {
-    margin: 0 10px;
-  }
-  
-  .menus a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  .menus a:hover {
-    color: aqua;
-  }
-  
+
   .footer-hr {
-    margin-top: 10px; /* Adjusted the margin top */
-    margin-bottom: 10px; /* Added margin bottom */
-    width: 90vw; /* Membuat hr sepanjang viewport */
-    transform: translateX(-50vw); /* Menggeser hr ke kiri */
-    left: 55%; /* Posisi horizontal tengah */
-    position: relative; /* Supaya left bisa berfungsi */
-  }
   
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+    transform: translateX(-50vw);
+    left: 55%;
+    position: relative;
+  }
+
   .copy {
-    margin-bottom: 10px; /* Added margin bottom */
-    transform: translateY(-5px); /* Menggeser p ke atas */
-    text-align: left; /* Menggeser teks ke kiri */
-    padding-left: 10px; /* Tambahan padding kiri jika diperlukan */
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content p {
+    min-width: 80%;
+  }
+
+  .footer-hr {
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+    transform: translateX(-50vw);
+    left: 55%;
+    position: relative;
+  }
+
+  .copy {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content p {
+    min-width: 80%;
+  }
+
+  .footer-hr {
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+    transform: translateX(-50vw);
+    left: 55%;
+    position: relative;
+  }
+
+  .copy {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+
+@media (max-width: 476px) {
+  .footer-content p {
+    min-width: 80%;
+  }
+
+  .footer-hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+    transform: translateX(-50vw);
+    left: 55%;
+    position: relative;
+  }
+
+  .copy {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .footer-content p {
+    font-size: 10px;
+    width: 95%;
+  }
+
+  .footer-content img {
+    width: 60%;
+  }
+
+  .menus a {
+    font-size: 12px;
+  }
+
+  .footer-hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90vw;
+  transform: translateX(-50vw);
+  left: 55%;
+  position: relative;
+}
+
+.copy {
+  text-align: center;
+  padding-left: 0;
+}
 }
 
 /* footer end */

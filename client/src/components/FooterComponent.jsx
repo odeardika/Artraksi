@@ -4,7 +4,7 @@ import logo from '../assets/img/Logo.svg';
 
 const FooterComponent = () => {
   return (
-    <footer className="footer">
+    <footer className="footer w-100">
       <Container className="footer-content">
         <Row>
           <Col>
