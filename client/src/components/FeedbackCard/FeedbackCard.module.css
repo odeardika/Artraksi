@@ -32,3 +32,18 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 1024px){
+    .card{
+        width: 45%;
+        /* height: auto; */
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card{
+        width: 90%;
+        height: auto;
+    }
+    
+}

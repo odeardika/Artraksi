@@ -1,0 +1,441 @@
+/* STYLE HEADER COMUNITY DETAIL */
+header{
+    background: #fff;
+}
+
+.detailpage .header-box h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.detailpage .header-box p{
+    line-height: 2;
+    color: #666;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.detailpage .header-box img{
+    width: 70%;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .detailpage .header-box{
+        padding-top: 8rem;
+        flex-direction: column;
+        text-align: center;
+  
+    }
+
+    .detailpage .header-box img{
+        width: 300px;
+        display: block;
+        margin-inline: auto;
+    }
+
+    
+}
+
+@media screen and (max-width: 575px) {
+    .detailpage .header-box h1{
+        font-size: 3rem;
+    }
+
+    .detailpage .header-box img{
+        width: 285px;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .detailpage .header-box h1{
+        font-size: 2.4rem;
+    }
+
+    .detailpage .header-box p{
+        font-size: 14px;
+    }
+
+    .detailpage .header-box img{
+        width: 255px;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .detailpage .header-box h1{
+        font-size: 2rem;
+    }
+
+    .detailpage .header-box p{
+        font-size: 12px;
+    }
+
+    .detailpage .header-box img{
+        width: 220px;
+    }
+    
+}
+
+/* STYLE HEADER COMUNITY DETAIL END */
+
+
+
+
+
+
+/* STYLE NEW CONTENT SECTION */
+.new-content-section {
+    background: #EDF3F4; /* Warna latar belakang contoh */
+    padding: 60px 0; /* Padding contoh */
+  }
+  
+  .new-content-section .content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Memusatkan konten secara horizontal */
+  }
+  
+  .new-content-section .content-box h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .new-content-section .content-box p {
+    font-size: 1.2rem; /* Atur ukuran font untuk kesesuaian */
+    line-height: 2;
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .new-content-section .content-box img {
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+  }
+  
+  @media screen and (max-width: 992px) {
+    .new-content-section .content-box {
+      padding-top: 8rem;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .new-content-section .content-box img {
+      width: 370px;
+      display: block;
+      margin: 0 auto; /* Memusatkan gambar secara horizontal */
+    }
+  
+    .new-content-section .content-box h1 {
+      margin-top: 5px; /* Ruang bawah h1 pada layar kecil */
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .new-content-section .content-box h1 {
+      font-size: 3rem;
+    }
+  
+    .new-content-section .content-box img {
+      width: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 474px) {
+    .new-content-section .content-box h1 {
+      font-size: 2.4rem;
+    }
+  
+    .new-content-section .content-box p {
+      font-size: 14px;
+    }
+  
+    .new-content-section .content-box img {
+      width: 275px;
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .new-content-section .content-box h1 {
+      font-size: 2rem;
+    }
+  
+    .new-content-section .content-box p {
+      font-size: 12px;
+    }
+  
+    .new-content-section .content-box img {
+      width: 250px;
+    }
+  }
+  
+  .leader-profile-container{
+    
+  }
+
+
+  .rounded-image {
+    border-radius: 50%;
+    width: 400px; /* Memastikan gambar memenuhi elemen induknya */
+    height: 400px; /* Memastikan rasio aspek gambar */
+  }
+  
+  /* STYLE NEW CONTENT SECTION END */
+
+
+
+
+  /* STYLE KEGIATAN */
+
+  .detailpage .kegiatan{
+    background: #fff;
+    padding-bottom: 100px;
+  }
+
+  .detailpage .kegiatan .row:nth-child(1) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .detailpage .kegiatan .row:nth-child(1) h1{
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #333;  
+  }
+
+  .detailpage .kegiatan .row:nth-child(2) .descrip p{
+    color: #666;
+  }
+
+  .detailpage .kegiatan .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    padding-inline: 10px;
+  }
+
+  .detailpage .kegiatan .row:nth-child(2) .col{
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .detailpage .kegiatan .row:nth-child(2) img{
+    height: 300px;
+  }
+
+  .detailpage .kegiatan .row:nth-child(2) h5{
+    color: #000;
+    font-weight: bold;
+    line-height: 1.5;
+
+  }
+
+  
+@media screen and (max-width: 575px) {
+  .detailpage .kegiatan h1 {
+      font-size: 3rem;
+      text-align: center; /* Menyamakan teks ke tengah */
+      
+  }
+
+  .detailpage .header-box img{
+      width: 300px;
+  }
+}
+
+@media screen and (max-width: 474px) {
+  .detailpage .kegiatan h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  
+}
+
+@media screen and (max-width: 375px) {
+  .detailpage .kegiatan h1 {
+    font-size: 2rem;
+  }
+}
+
+  
+
+
+  /* STYLE KEGIATAN END */
+
+/* STYLE GALERI */
+.detailpage .galeri {
+  background: #EDF3F4; /* Warna latar belakang contoh */
+  padding-bottom: 100%;
+}
+
+.detailpage .galeri .row:nth-child(1) {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.detailpage .galeri .row:nth-child(1) h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Swiper lama */
+.detailpage .galeri .swiper {
+  width: 100%;
+  height: 100%;
+
+}
+
+.detailpage .galeri .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailpage .galeri .swiper-slide .image {
+  width: 100%;
+  height: 700px;
+}
+
+.detailpage .galeri .swiper-slide .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Responsive adjustments for old Swiper */
+@media screen and (max-width: 575px) {
+  .detailpage .galeri .swiper-slide .image {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 474px) {
+  .detailpage .galeri .swiper-slide .image {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detailpage .galeri .swiper-slide .image {
+    width: auto;
+    height: auto;
+  }
+}
+
+
+.detailpage .galeri .title{
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.detailpage .galeri .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ 
+
+/* newSwiper.css */
+
+.detailpage .new-galeri .row:nth-child(1) {
+  padding-top: 50px;
+}
+
+.detailpage .new-galeri .row:nth-child(1) h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Swiper baru */
+.detailpage .new-galeri .newSwiper {
+  width: 100%;
+  height: 100%;
+  background: #EDF3F4;
+}
+
+.detailpage .new-galeri .newSwiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailpage .new-galeri .newSwiper-slide .new-image {
+  width: 100%;
+  height: 700px; /* Sesuaikan tinggi gambar */
+}
+
+.detailpage .new-galeri .newSwiper-slide .new-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailpage .new-galeri .newSwiper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -30px; /* Contoh penyesuaian posisi */
+}
+
+.detailpage .new-galeri .row-title-new {
+  margin-top: -80px; /* Ubah nilai sesuai kebutuhan */
+  color: #000;
+}
+
+
+.detailpage .new-galeri .row-title-new .title-new{
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+
+/* Responsive adjustments for newSwiper */
+@media screen and (max-width: 575px) {
+  .detailpage .new-galeri .newSwiper-slide .new-image {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 474px) {
+  .detailpage .new-galeri .newSwiper-slide .new-image {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .detailpage .new-galeri .newSwiper-slide .new-image {
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Additional styles for responsive design */
+@media screen and (max-width: 575px) {
+  .detailpage .galeri .row:nth-child(1) h1 {
+    font-size: 2.5rem;
+  }
+  .detailpage .new-galeri .row:nth-child(1) h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* STYLE GALERI END */
