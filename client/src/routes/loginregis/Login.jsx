@@ -36,10 +36,10 @@ export default function Login() {
                     </div>
                     <span className="link" onClick=''>
                     Belum mempunyai akun? {""}
-                    <a href="regis">Daftar disini</a>
+                    <a className="regis" href="regis">Daftar disini</a>
                     </span>
                     <span className="back_home">
-                        <a href="./">beranda</a>
+                        <a className="home" href="./">beranda</a>
                     </span>
                 </div>
                 <div className="kanan col-lg-7 col-xl-7 grid-right">

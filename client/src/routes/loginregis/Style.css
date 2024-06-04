@@ -51,6 +51,16 @@ a{
   color: #737373 ;
 }
 
+a.regis:hover{
+  color: rgb(17, 210, 239);
+}
+a.home:hover{
+  color: rgb(17, 210, 239);
+}
+a.login:hover{
+  color: rgb(17, 210, 239);
+}
+
 .back_home{
   float: right;
 }

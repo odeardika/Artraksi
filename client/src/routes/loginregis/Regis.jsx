@@ -86,10 +86,10 @@ export default function Regis() {
               </div>
               <span className="link" onClick=''>
                 Sudah mempunyai akun? {""}
-                <a href="login">Masuk disini</a>
+                <a className="login" href="login">Masuk disini</a>
               </span>
               <span className="back_home">
-                <a href="./">beranda</a>
+                <a className="home" href="./">beranda</a>
               </span>
             </div>
           </form>
