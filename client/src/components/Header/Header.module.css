@@ -1,0 +1,11 @@
+.container {
+    background-image: linear-gradient(to right, #216162, #237662);
+    padding: 0;
+}
+
+.header_container {
+    padding: 1% 0;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+}

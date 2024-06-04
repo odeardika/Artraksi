@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col,  } from "react-bootstrap";
 import axios from "axios";
-import FooterComponent from "../../components/FooterComponent";
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 
 import { useParams } from "react-router-dom";
 
@@ -15,10 +15,8 @@ import 'swiper/css/navigation';
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 
-
-
-
 import './main.css';
+import Header from "../../components/Header/Header";
 
 const DetailComunity = () => {
   const { id } = useParams();
@@ -40,9 +38,9 @@ const DetailComunity = () => {
     });
   }, []);
 
-  console.log(id);
   return (
     <div className="detailpage">
+      <Header/>
       <header className="w-100 min-vh-100 d-flex align-items-center">
         <Container>
           <Row className="header-box d-flex align-item center">

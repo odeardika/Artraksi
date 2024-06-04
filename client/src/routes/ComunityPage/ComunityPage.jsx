@@ -8,6 +8,7 @@ import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
 import FeedbackCard from '../../components/FeedbackCard/FeedbackCard';
 import styles from './ComunityPage.module.css';
+import './CommunityPage.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,6 +17,8 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import Selengkapnya from '../../components/NextButton/Selengkapnya/Selengkapnya';
+import HeaderNavbar from '../../components/HeaderNavbar/HeaderNavbar';
+import FooterComponent from '../../components/FooterComponent/FooterComponent';
 
 const userFeedback = [
   {id : 0, username : "Alan Garza", content : "Website ini memberikan informasi yang sangat lengkap tentang berbagai kebudayaan di Indonesia. Saya jadi bisa lebih mengenal dan menghargai keberagaman budaya kita.", img : user0, rate : 5},
@@ -35,6 +38,9 @@ const ComunityPage = () => {
   return (
     <div className="komunitaspage">
         {/* headerpage */}
+        <header className={styles.header}>
+          <HeaderNavbar/>
+        </header>
 
         <div className="komunitas w-100 min-vh-100">
             <Container>
@@ -145,7 +151,7 @@ const ComunityPage = () => {
           </Container>
         
         </div>
-
+      <FooterComponent/>
     </div>
   )
 }

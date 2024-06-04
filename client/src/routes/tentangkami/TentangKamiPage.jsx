@@ -1,11 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Headers from "../../components/Header/Header";
 import "./main.css"
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 
 
 
 function TentangKamiPage() {
   return (
     <div className="tentangpage">
+    <Headers/>
     <div className="hero  ">
        <Container>
         <Row>
@@ -24,7 +27,7 @@ function TentangKamiPage() {
           <p>Perkenalkan kami Hastra Dewandra sebuah grup yang tergabung dalam proyek akhir studi independen UI/UX dan Web Development. Kami memiliki ketertarikan yang sama dalam seni pertunjukan dan teknologi, sehingga kami memutuskan untuk membuat sebuah website informasi mengenai seni pertunjukan di Yogyakarta sebagai projek massive kami.</p>
           </Col>
         </Row>
-      </Container>\
+      </Container>
     </div>
 
 
@@ -49,7 +52,7 @@ function TentangKamiPage() {
         </Container>
       </div>
 
-
+    <FooterComponent/>
 
 
 

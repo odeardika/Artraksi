@@ -50,7 +50,7 @@ const router = createBrowserRouter([
     element: <Calender />,
   },
   {
-    path: "/routes/tentangkami",
+    path: "/tentang_kami",
     element: <TentangKamiPage />
   }
 ]);
