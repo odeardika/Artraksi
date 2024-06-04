@@ -7,7 +7,7 @@ import Home from "./routes/Home/Home.jsx";
 import Login from "./routes/loginregis/Login.jsx";
 import Regis from "./routes/loginregis/Regis.jsx";
 import ComunityPage from "./routes/ComunityPage.jsx";
-import BlogPage from "./routes/BlogPage.jsx";
+import BlogPage from "./routes/Blog/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 
