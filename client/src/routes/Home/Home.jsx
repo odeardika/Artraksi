@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
+import "./main.css";
 import HeaderNavbar from "../../components/HeaderNavbar/HeaderNavbar";
 import articleMVP from "../../assets/homepage-article.svg";
 import komunitasMVP from "../../assets/homepage-komunitas.svg"
@@ -15,6 +16,9 @@ import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
 import FeedbackCard from "../../components/FeedbackCard/FeedbackCard";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
+
+
+import { Container, Row, Col } from "react-bootstrap";
 
 const blog = [
   {
@@ -64,8 +68,10 @@ const userFeedback = [
 export default function Home() {
   return (
     <>
-      {/* header with backgroud */}
-      <header className={styles.header}>
+
+    {/* header with backgroud */}
+   
+    <header className={styles.header}>
         <nav className={styles.header_navbar}>
           <HeaderNavbar/>
         </nav>
@@ -75,28 +81,42 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Show MVP section */}
-      <section className={styles.mvp_preview}>
-        {/* for article */}
-        <article className={styles.article}>
-        <img src={articleMVP} alt="Article" />
-          <div className={styles.mvp_desc}>
-            <h3>Artikel Kebudayaan Yogyakarta</h3>
-            <p>Telusuri pesona budaya Yogyakarta melalui artikel kami yang mendalam. Temukan cerita-cerita menarik tentang tradisi, seni, dan sejarah yang membentuk identitas unik kota ini. Dari seni wayang hingga keindahan arsitektur kraton, jelajahi dan pahami kekayaan budaya istimewa Yogyakarta.</p>
-            <div className={styles.button}>Selengkapnya</div>
-          </div>
-        </article>
-        {/* for komunitas */}
-        <article className={styles.komunitas}>
-          <div className={styles.mvp_desc}>
-            <h3>Komunitas Seni Pertunjukan</h3>
-            <p className={styles.komunitas_desc}>Temukan komunitas kebudayaan Yogyakarta dan terhubunglah dengan para pecinta budaya lokal. Teman-teman baru dan diskusi yang mendalam tentang seni, tradisi, dan acara budaya. Jadilah bagian dari upaya melestarikan dan memperkenalkan kekayaan budaya istimewa Yogyakarta kepada dunia.</p>
-            <div className={styles.button}>Selengkapnya</div>
-          </div>
-          <img src={komunitasMVP} alt="Article" />
-        </article>
-      </section>
+          {/* Show MVP section */}
+          <div className="artikel w-100 min-vh-100 d-flex align-items-center">
+    <Container>
+        <Row className="header-box d-flex align-items-center">
+            <Col lg="6">
+                <img src={articleMVP} alt="Artikel Kebudayaan Yogyakarta" className="img-fluid" />
+            </Col>
+            <Col lg="6" className="pt-lg-0 pt-5">
+                <h3 className="mb-4">Artikel Kebudayaan Yogyakarta</h3>
+                <p className="mb-4">
+                    Telusuri pesona budaya Yogyakarta melalui artikel kami yang mendalam. Temukan cerita-cerita menarik tentang tradisi, seni, dan sejarah yang membentuk identitas unik kota ini. Dari seni wayang hingga keindahan arsitektur kraton, jelajahi dan pahami kekayaan budaya istimewa Yogyakarta.
+                </p>
+                <button className="btn btn-success btn-lg-5">Selengkapnya</button>
+            </Col>
+        </Row>
+    </Container>
+</div>
 
+<div className="komunitas w-100 min-vh-100 d-flex align-items-center">
+    <Container>
+        <Row className="header-box d-flex align-items-center">
+            <Col lg="6" className="pt-lg-0 pt-5">
+                <h3 className="mb-4">Komunitas Seni Pertunjukan</h3>
+                <p className="mb-4">
+                    Temukan komunitas kebudayaan Yogyakarta dan terhubunglah dengan para pecinta budaya lokal. Teman-teman baru dan diskusi yang mendalam tentang seni, tradisi, dan acara budaya. Jadilah bagian dari upaya melestarikan dan memperkenalkan kekayaan budaya istimewa Yogyakarta kepada dunia.
+                </p>
+                <button className="btn btn-success btn-lg-5 mb-3">Selengkapnya</button>
+            </Col>
+            <Col lg="6" className="text-end">
+                <img src={komunitasMVP} alt="Komunitas Seni Pertunjukan Yogyakarta" className="img-fluid" />
+            </Col>
+        </Row>
+    </Container>
+</div>
+
+    
       {/* Populer Article */}
       <section className={styles.article_section}>
         <h2>Artikel <span>Terpopuler</span></h2>
@@ -110,34 +130,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Komunitas */}
-      <section className={styles.komunitas_section}>
-        <div className={styles.komunitas_detail_container}>
-          <h2>Lebih dekat dengan  Pegiat Seni Pertunjukan <span>Yogyakarta</span></h2>
-          <div className={styles.komunitas_detail}>
-            <ComunityInfoCard index={0}/>
-            <ComunityInfoCard index={1}/>
-            <ComunityInfoCard index={2}/>
-          </div>
-        </div>
-          <img src={ComunitySectionImg} alt="" />
-      </section>
 
-      {/* Blog Preview  */}
+         {/* Komunitas */}
+         <section className={styles.komunitas_section}>
+      <Container>
+        <Row>
+          <Col md={12} lg={6} className={styles.komunitas_detail_container}>
+            <h2>Lebih dekat dengan Pegiat Seni Pertunjukan <span>Yogyakarta</span></h2>
+            <div className={styles.komunitas_detail}>
+                <ComunityInfoCard index={0}/>
+                <ComunityInfoCard index={1}/>
+                <ComunityInfoCard index={2}/>
+            </div>
+          </Col>
+          <Col md={12} lg={6} className="text-center">
+            <img src={ComunitySectionImg} alt="Komunitas Seni Pertunjukan Yogyakarta" className="img-fluid" />
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+
+     {/* Blog Preview  */}
+
       <section className={styles.blog_section}>
-        <h2>Dapatkan cerita terbaru dari <span>pengguna</span></h2>
-        <div className={styles.blog_container}>
-          {blog.map(blogItem => <BlogCard key={blogItem.id} props={blogItem}/>)}
-        </div>
-      </section>
+      <h2>Dapatkan cerita terbaru dari <span>pengguna</span></h2>
+      <div className={styles.blog_container}>
+        {blog.map(blogItem => <BlogCard key={blogItem.id} props={blogItem} />)}
+      </div>
+    </section>
 
-      {/* Masukan Penggunan */}
-      <section className={styles.feedback}>
-        <h2>Masukan dari Pengguna</h2>
-        <div className={styles.feedback_container}>
-          {userFeedback.map(feedback => <FeedbackCard key={feedback.id} rate={feedback.rate} props={feedback}/>)}
-        </div>
-      </section>
+     {/* Masukan Penggunan */}
+     <section className={styles.feedback}>
+      <h2>Masukan dari Pengguna</h2>
+      <div className={styles.feedback_container}>
+        {userFeedback.map(feedback => <FeedbackCard key={feedback.id} rate={feedback.rate} props={feedback} />)}
+      </div>
+    </section>
       
         {/* Footer */}  
         <FooterComponent/>
