@@ -15,6 +15,7 @@ import user0 from "../../assets/user/0.png";
 import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
 import FeedbackCard from "../../components/FeedbackCard/FeedbackCard";
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -166,13 +167,9 @@ export default function Home() {
         {userFeedback.map(feedback => <FeedbackCard key={feedback.id} rate={feedback.rate} props={feedback} />)}
       </div>
     </section>
-
-
-
-    
       
-      
-      
+        {/* Footer */}  
+        <FooterComponent/>
     </>
   );
 }

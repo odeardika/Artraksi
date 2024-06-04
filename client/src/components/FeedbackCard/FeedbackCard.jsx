@@ -7,12 +7,12 @@ import empty from '../../assets/icon/star/empty.svg';
 
 const Rate = (rate) => {
     const star = []
-    let emptyStar;
+    let emptyStar = 5 - rate;
     for (let i = 1; i <= rate ; i++){
         star.push(full)
         if(rate - i === 0.5){
             star.push(half)
-            emptyStar = 5 - (rate + 0.5)
+            emptyStar = emptyStar - 0.5
         }
     }
     for (let i = 0; i < emptyStar ; i++){

@@ -1,0 +1,179 @@
+/* style Komunitaspage */
+.komunitaspage .komunitas{
+    background:#FFFFFF;
+    padding-bottom: 100px;
+  }
+  
+  .komunitaspage .komunitas .row:nth-child(1) {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  
+  .komunitaspage .komunitas .row:nth-child(1) h1{
+    color: #000;
+  }
+  
+  .komunitaspage .komunitas .row:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-inline: 10px;
+  }
+  
+  .komunitaspage .komunitas .row:nth-child(2) .col{
+    background-color: #fff;
+    padding: 0;
+  }
+  
+  .komunitaspage .komunitas .row:nth-child(2) img{
+    height: 300px;
+  }
+  /* style={{ width: '90px', height: '90px' }} */
+  .komunitaspage .komunitas .row:nth-child(2) .logo img{
+    width: 90px;
+    height: 90px;
+  
+  }
+  
+  .komunitaspage .komunitas .row:nth-child(2) .btn-transparent {
+    background-color: transparent;
+    /* border: none; */
+    line-height: 1;
+    font-size: 20px;
+    color: #237662;
+  
+  
+  }
+  
+  
+  
+  /* style Komunitaspage end */
+  
+  /* style testimonial */
+  .komunitaspage .testimonial {
+    background:#EDF3F4;
+  }
+  
+  .komunitaspage .testimonial .row:nth-child(1) h1{
+    color: #000;
+  }
+  
+  .komunitaspage .testimonial .row:nth-child(1) p{
+    color: #58af9f;
+    font-size: 20px;
+  }
+  
+  .komunitaspage .testimonial .swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    background: #fff;
+    padding: 20px;
+  
+    /* Center slide text vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide:active{
+    cursor: grabbing;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide .desc{
+    color: #000;
+    font-weight: reguler;
+    line-height: 2;
+    margin-bottom: 50px;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide .people{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide .people h5,
+  .komunitaspage .testimonial .swiper-slide .people i{
+    color: #000;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide .people h5{
+    font-weight:600;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide .people i{
+    opacity: 50%;
+  }
+  
+  .komunitaspage .testimonial .swiper-slide img{
+    width: 80px;
+    border-radius: 100%;
+    
+  }
+  
+  @media screen and (max-width:768px) {
+    .komunitaspage .testimonial .swiper{
+      padding-inline: 10px;
+    }
+    .komunitaspage .testimonial .swiper-slide .people{
+      justify-content: center;
+    }
+    
+  }
+  /* style testimonial end */
+  
+  
+  /* style faq */
+  .komunitaspage .faq{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #fff;
+  }
+  
+  .komunitaspage .faq h1{
+    color: #000;
+  }
+  
+  .komunitaspage .faq p{
+    color: #58af9f;
+    font-size: 20px;
+  }
+  
+  
+  /* Atau jika Anda ingin menargetkan hanya accordion button yang merupakan bagian dari header */
+  .komunitaspage .faq .accordion .accordion-header .accordion-button {
+    color: #000; /* Ganti dengan warna yang Anda inginkan */
+    background-color: #58AF9F; /* Jika ingin mengubah background juga */
+  }
+  
+  
+  .komunitaspage .faq .accordion ,.accordion-button{
+    color: #dfdbdb;
+    font-weight: reguler;
+    background-color: #fff;
+    line-height: 1.5;
+  }
+  
+  .komunitaspage .faq .accordion .accordion-button:focus {
+    border: none;
+    box-shadow: none;
+  }
+  
+  .komunitaspage .faq .accordion .accordion-body{
+    background-color: #fff;
+  }
+  
+  .komunitaspage .faq-row {
+    max-width: 800px; /* Sesuaikan lebar maksimal sesuai kebutuhan */
+    margin: 0 auto; /* Centering row */
+  }
+  
