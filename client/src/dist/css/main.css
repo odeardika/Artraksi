@@ -259,77 +259,9 @@
   margin: 0 auto; /* Centering row */
 }
 
-/*style navtab*/
 
-:root {
-  --body-bg:  #EDF3F4;
-  --main-color:  #EDF3F4;
-  --main-bg-color:  #EDF3F4;
-  
-  --main-transition: all 0.2s linear;
-  }
-  
-  * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  }
-  
-  body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  }
-  
-  .App {
-  font-family: sans-serif;
-  width: 100%;
-  }
 
-  .tab-list {
-  border-radius: 5px;
-  padding-left: 0;
-  color: #202020;
-  transition: var(--main-transition);
-  font-size: 53px;
-  margin: 0;
-  font-weight: 800;
-  font-size: 30px;
-  }
 
-  .tab-list-item:hover{
-    transition: all 0.2s ease-in-out;
-    text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
-  
-  .tab-list-item {
-  display: inline-block;
-  list-style: none;
-  cursor: pointer;
-  padding: 20px;
-  transition: var(--main-transition);
-  }
-  
-  .tab-content {
-  padding: 20px;
-  background-color: var(--main-bg-color);
-  }
-  
-  .tab-list-active {
-  text-decoration: underline ;
-  color: #184A48;
-  transition: var(--main-transition);
-  font-size: 53px;
-  margin: 0;
-  font-weight: 800;
-  font-size: 30px;
-  }
-
-  .tab-list-active:hover {
-  background: var(--main-bg-color);
-  }  
 
 /* style faq end */
   

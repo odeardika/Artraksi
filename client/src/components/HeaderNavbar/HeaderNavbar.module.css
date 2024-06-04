@@ -23,7 +23,7 @@
 }
 
 .header_container{
-    padding: 1% 0;
+    padding: 2% 0;
     display: flex;
     justify-content: center;
     margin-inline: auto;
@@ -32,7 +32,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    gap: 23rem;
+    gap: 10rem;
 }
 
 .navbar {
