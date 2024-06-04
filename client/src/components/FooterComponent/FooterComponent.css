@@ -1,0 +1,72 @@
+  
+  .footer {
+    /* Fallback for older browsers */
+    background: #FFFFFF;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left, #237662, #216162);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #237662, #216162);
+    width: 100vw;
+    font-family: sans-serif;
+    padding-top: 40px;
+    color: #ffffff;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-content img {
+    line-height: 3rem;
+  }
+  
+  .footer-content p {
+    min-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .footer-logo{
+    width: 10rem;
+    height: auto;
+  }
+  .menus {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0; /* Adjusted the margin bottom */
+  }
+  
+  .menus li {
+    margin: 0 10px;
+  }
+  
+  .menus a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .menus a:hover {
+    font-weight: 600;
+  }
+  
+  .footer-hr {
+    margin-top: 10px; /* Adjusted the margin top */
+    margin-bottom: 10px; /* Added margin bottom */
+    width: 90vw; /* Membuat hr sepanjang viewport */
+    transform: translateX(-50vw); /* Menggeser hr ke kiri */
+    left: 55%; /* Posisi horizontal tengah */
+    position: relative; /* Supaya left bisa berfungsi */
+  }
+  
+  .copy {
+    margin-bottom: 10px; /* Added margin bottom */
+    transform: translateY(-5px); /* Menggeser p ke atas */
+    text-align: left; /* Menggeser teks ke kiri */
+    padding-left: 10px; /* Tambahan padding  kiri jika diperlukan */
+}
