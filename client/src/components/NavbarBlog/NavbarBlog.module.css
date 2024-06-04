@@ -1,6 +1,5 @@
 .navbar_text {
-    color: white;
-    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
@@ -11,21 +10,9 @@
     color: #184A48;
 }
 
-.dropdown_text a{
-    text-decoration: none;
-    padding-left: 1rem;
-    color: #184A48;
-    font-size: 1.5rem;
-}
-
-.dropdown_text:hover {
-    background-color: #184a4815;
-}
-
 .header_container{
     padding: 1% 0;
     display: flex;
-    justify-content: center;
     margin-inline: auto;
 }
 
