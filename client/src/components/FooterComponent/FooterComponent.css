@@ -7,7 +7,6 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to left, #237662, #216162);
     width: 100vw;
-    font-family: sans-serif;
     padding-top: 40px;
     color: #ffffff;
   }
@@ -68,5 +67,31 @@
     margin-bottom: 10px; /* Added margin bottom */
     transform: translateY(-5px); /* Menggeser p ke atas */
     text-align: left; /* Menggeser teks ke kiri */
-    padding-left: 10px; /* Tambahan padding  kiri jika diperlukan */
+    padding-left: 0.3rem; /* Tambahan padding  kiri jika diperlukan */
+}
+
+@media screen and (max-width: 320px) {
+  .copy {
+    padding-left: 7rem;
+    font-size: 12px !important;
+  }
+  .footer-content img {
+    line-height: 1rem;
+  }
+  .footer-logo{
+    width: 8rem;
+    height: auto;
+  }
+
+  .footer-content p {
+    min-width: 500px;
+    margin: 0 auto;
+    line-height: 28px;
+    font-size: 12px;
+  }
+  .menus{
+    margin: 0;
+    font-size: 10px;
+    justify-content: center;
+  }
 }

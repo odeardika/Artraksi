@@ -12,7 +12,6 @@ import ArticlePage from "./routes/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
-import './dist/css/main.css'
 
 
 
