@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
 .img_container {
     width: 400px;
     height: 270px;
@@ -13,6 +14,7 @@
 }
 
 .author_img {
+    border-radius: 5rem;
     width: 1.3rem;
     height: auto;
 }
@@ -40,11 +42,16 @@
 
 .article_detail p {
     width: 400px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
     font-size: 16px;
     font-weight: 400;
     color: #969696;
     margin-bottom: 0.5rem;
 }
+
 
 .article_detail div {
     color: #23766C;
