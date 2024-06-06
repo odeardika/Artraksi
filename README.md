@@ -7,27 +7,8 @@ Our website, as an online platform for preserving and introducing Indonesian cul
 ![Static Badge](https://img.shields.io/badge/React-0088CC?style=for-the-badge&logo=react&logoColor=fff)
 
 
-## Running Server
-
-### First Change directory into server
-```
-cd server
-```
-### Install all the package needed
-```
-npm install
-```
-### Running the server
-```
-npm start
-```
-
 ## Running Website
 
-### First Change directory into client directory
-```
-cd client
-```
 ### Install all the package needed
 ```
 npm install
