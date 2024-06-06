@@ -16,6 +16,7 @@ import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
 import FeedbackCard from "../../components/FeedbackCard/FeedbackCard";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
+import axios from "axios";
 
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -66,6 +67,21 @@ const userFeedback = [
 ]
 
 export default function Home() {
+  const [articles, setArticles] = React.useState([]);
+
+  React.useEffect(() => {
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/articles/top`)
+      .then(res => {
+        setArticles(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+  , []);
+
+
+
   return (
     <>
 
@@ -121,12 +137,7 @@ export default function Home() {
       <section className={styles.article_section}>
         <h2>Artikel <span>Terpopuler</span></h2>
         <div className={styles.list_article}>
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
+          {articles.map(article => <ArticleCard key={article.id} props={article} />)}
         </div>
       </section>
 
