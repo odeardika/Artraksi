@@ -72,3 +72,23 @@
 .search_container h2 {
     font-size: 40px;
 }
+
+.trending_article_container{
+    display: flex;
+    overflow-x: scroll;   
+    gap: 32px;
+    scrollbar-width: none;
+}
+
+.tranding_container{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.tranding_container h2{
+    margin-bottom: 36px;
+    padding-left: 5rem;
+    font-size: 40px;
+}
+
+

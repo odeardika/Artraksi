@@ -15,7 +15,7 @@ export default function ArticleCard({props}) {
         <div className={styles.article_detail}>
             <h3>{props.title}</h3>
             <p>{props.preview}</p>
-            <div>Selengkapnya <span>{'->'}</span></div>
+            <a className={styles.next} href={`${import.meta.env.VITE_WEBSITE_URL}/artikel/${props.id}`}>Selengkapnya <span className={styles.next_arrow}>{"->"}</span></a>
         </div>
     </div>
 </>
