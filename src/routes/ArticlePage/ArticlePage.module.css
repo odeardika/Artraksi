@@ -57,6 +57,7 @@
 
 .favorite_next:hover {
     font-size: 35px;
+    color: #65CCB7;
     /* make transaction for hover and after not hover the animation not instant reset */
     transition: all 0.5s;
     cursor: pointer;
