@@ -1,0 +1,66 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+.container{
+    display: flex;
+    margin: 32px 5rem;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail_img {
+    width: 320px;
+    height: 220px;
+    
+}
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding-right: 1rem;
+}
+
+.detail h3{
+    font-weight: 600;
+}
+
+.detail p{
+    color: #969696;
+}
+
+.more_detail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.more_detail label{
+    font-size: 18px;
+    color: #969696;
+    font-weight: 300;
+}
+
+.more_detail div {
+    display: flex;
+    gap: 1rem;
+}
+
+.more_detail img[alt="send icon"]{
+    padding-right: 1rem;
+}
+
+.more_detail div div{
+    display: flex;
+    gap: 0.5rem;
+}

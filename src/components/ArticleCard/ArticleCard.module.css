@@ -59,10 +59,23 @@
     font-weight: 500;
 }
 
-.article_detail span {
+.next_arrow {
     font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 500;
+}
+
+.next {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #23766C;
+    transition: all 0.5s ease;
+}
+    
+.next:hover {
+    color: #65CCB7;
+    font-size: 25px;
 }
 
 @media (max-width: 992px) {

@@ -8,7 +8,7 @@ import Login from "./routes/loginregis/Login.jsx";
 import Regis from "./routes/loginregis/Regis.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
-import ArticlePage from "./routes/ArticlePage.jsx";
+import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
