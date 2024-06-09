@@ -12,6 +12,7 @@ import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
+import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
 
 
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/artikel",
     element: <ArticlePage />,
+  },
+  {
+    path: "/artikel/:id",
+    element: <DetailArticle />,
   },
   {
     path: "/kalender",
