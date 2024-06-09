@@ -19,13 +19,13 @@ const FooterComponent = () => {
           </Col>
         </Row>
         <Row>
-  <Col>
-    <hr className="footer-hr" />
-    <p className="copy">
-      &copy; 2024 Hastra Dewandra - All Rights Reserved
-    </p>
-  </Col>
-</Row>
+      <Col>
+        <hr className="footer-hr" />
+        <p className="copy">
+          &copy; 2024 Hastra Dewandra - All Rights Reserved
+        </p>
+      </Col>
+    </Row>
       </Container>
     </footer>
   );

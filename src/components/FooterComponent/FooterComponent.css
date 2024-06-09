@@ -55,11 +55,11 @@
   }
   
   .footer-hr {
+    display: flex;
+    justify-content: center;
     margin-top: 10px; /* Adjusted the margin top */
     margin-bottom: 10px; /* Added margin bottom */
     width: 90vw; /* Membuat hr sepanjang viewport */
-    transform: translateX(-50vw); /* Menggeser hr ke kiri */
-    left: 55%; /* Posisi horizontal tengah */
     position: relative; /* Supaya left bisa berfungsi */
   }
   

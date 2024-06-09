@@ -9,6 +9,7 @@
     font-weight: 500;
 }
 
-/* .next_arrow:hover {
-    color: #23766C;
-} */
+.next_arrow:hover {
+    /* color: #23766C; */
+    transform: scale(3);
+}
