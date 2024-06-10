@@ -1,0 +1,121 @@
+/* hero */
+.acara .hero{
+    background-image: url("../../assets/kalender/hero kalender.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 500px;
+    font-style: italic;
+    
+}
+.acara .hero h1{
+    font-size: 100px;
+    font-weight: 700;
+}
+
+
+
+.acara .detail {
+    display: flex;
+    align-items: center;
+  }
+  
+  .acara .detail i{
+    margin-right: 10px;
+  }
+   /* hero end */
+
+  /* detail acara  */
+  .acara .desk h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+  .acara .desk .col .detail{
+    color: #000;
+    font-size: 20px;
+  }
+ 
+  .acara .desk .col .deskp{
+    color: #967c7c;
+    font-size: 20px;
+  }
+
+   /* detail acara end */
+
+   /* galeri */
+
+  .acara .galeri{
+    background: #e0dddd;
+  }
+
+  .acara .galeri h1{
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .acara .galeri .row:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+  }
+
+  .acara .galeri .row:nth-child(2) .col{
+    padding: 0;
+  }
+
+ .acara .galeri .row:nth-child(2) img{
+    height: 300px;
+ }
+    /* galeri end */
+
+ /* jadwal acara  */
+.acara .jadwal h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.acara .jadwal .info{
+    display: flex;
+    flex-direction: column;
+    line-height: 1rem;
+}
+
+.acara .jadwal .info .desk{
+    color: #5E5E5E;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+ /* jadwal acara end */
+
+ /* Simpan Acara  */
+.acara .simpan{
+    background: #ccbdbd;
+}
+
+.acara .simpan h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.acara .simpan p{
+    color: #5E5E5E;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.acara .simpan .btn-transparent{
+    background-color: transparent;
+    border: 1px solid #dc3545; 
+    color: #dc3545; 
+}
+
+.acara .simpan .btn-transparent:hover{
+    background-color: rgba(220, 53, 69, 0.1); 
+}
+
+
+ /* Simpan Acara end */
