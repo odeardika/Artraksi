@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./Style.css"
-import logo from "./aset/Logo.svg"
+import logo from "../../assets/logo/Logo-green.svg"
 import bgside from "./aset/bgawal.jpg"
 
 export default function Login() {

@@ -1,0 +1,106 @@
+.container{
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.hero_container{
+    overflow: hidden;
+    display: flex;
+    height: 110%;
+    flex: 1;
+}
+
+.hero{
+    width: 100%;
+    object-fit: cover;
+}
+
+.form_regis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+}
+
+.regis_input_field{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 2rem;
+}
+.regis_label {
+    text-align: left;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    color: black;
+}
+
+.regis_input{
+    border: #BCBCBC solid 1px;
+    border-radius: 10px;
+    height: 2rem;
+    margin-bottom: 20px;
+    padding: 1rem;
+    color: hsl(0, 0%, 70%);
+}
+
+.regis_input:focus{
+    outline: none;
+    border: hsl(0, 0%, 40%) solid 1px;
+}
+
+.regis_button{
+    background-color: #216162;
+    color: white;
+    width: 70%;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 300;
+}
+
+.regis_button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.regis_button_container{
+    margin-top: 32px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.regis_p{
+    text-align: center;
+    color: #737373;
+}
+
+.regis_p_span{
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.login_anchor{
+    color: #000;
+}
+
+.login_anchor:hover{
+    color: hsl(0, 0%, 30%);
+}
+
+.logo{
+    width: 10rem;
+    height: auto;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: center;
+}
+
+.form_heading{
+    text-align: center;
+    font-size: 18px;
+    color: #737373;
+}
