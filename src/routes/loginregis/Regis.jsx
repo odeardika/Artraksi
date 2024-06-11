@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./Style.css"
-import logo from "./aset/Logo.svg"
 import bgside from "./aset/bgawal.jpg"
+import logo from "../../assets/logo/Logo-green.svg"
 
 export default function Regis() {
 
