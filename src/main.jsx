@@ -9,7 +9,7 @@ import Regis from "./routes/loginregis/Regis.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
-import Calender from "./routes/Calender.jsx";
+import Calender from "./routes/KalenderPage/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
     element: <DetailArticle />,
   },
   {
-    path: "/kalender",
+    path: "/kalenderPage",
     element: <Calender />,
   },
   {
