@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/logo/Logo-green.svg";
 import styles from "./RegisPage.module.css";
 
 
 export default function RegisPage() {
+  const [username, setUsername] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [confirm, setConfirm] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(username, email, password, confirm); 
+  }
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  }
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  }
+  const handleConfirmChange = (e) => {
+    setConfirm(e.target.value);
+  }
+
   return (
     <>
         <div className={styles.container}>
@@ -19,19 +42,19 @@ export default function RegisPage() {
 
                 <div className={styles.regis_input_field}>
                   <label className={styles.regis_label} htmlFor="name">Nama</label>
-                  <input className={styles.regis_input} type="text" name="" id="name" />
+                  <input className={styles.regis_input} value={username} onChange={handleUsernameChange} type="text" name="" id="name" />
                 
                   <label className={styles.regis_label} htmlFor="email">Email</label>
-                  <input className={styles.regis_input} type="text" name="" id="email" />
+                  <input className={styles.regis_input} value={email} onChange={handleEmailChange} type="text" name="" id="email" />
                 
                   <label className={styles.regis_label} htmlFor="password">Password</label>
-                  <input className={styles.regis_input} type="password" name="" id="password" />
+                  <input className={styles.regis_input} value={password} onChange={handlePasswordChange} type="password" name="" id="password" />
                 
                   <label className={styles.regis_label} htmlFor="confirm">Konfirmasi Password</label>
-                  <input className={styles.regis_input} type="password" name="" id="confirm" />
+                  <input className={styles.regis_input} value={confirm} onChange={handleConfirmChange} type="password" name="" id="confirm" />
 
                   <div className={styles.regis_button_container}>
-                    <button className={styles.regis_button}>Buat Akun</button>
+                    <button className={styles.regis_button} onClick={handleSubmit}>Buat Akun</button>
                   </div>
                   <p className={styles.regis_p}>Sudah mempunyai akun? 
                     <span className={styles.regis_p_span}>
