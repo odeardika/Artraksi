@@ -84,7 +84,7 @@ export default function RegisPage() {
         setEmailError(true);
       }
       if(err.response.data.message === "username is already have account"){
-        setErrorMessages("Username sudah terdaftar");
+        setErrorMessages("Nama sudah terdaftar");
         setUsernameError(true);
       }
       if(err.response.data.message === "email is already have account"){
@@ -104,49 +104,49 @@ export default function RegisPage() {
 
   return (
     <>
-        <div className={styles.container}>
-            <form action="" className={styles.form_regis}>
-                <div className={styles.logo_container}>
-                  <img className={styles.logo} src={logo} alt="logo" />
+      <div className={styles.container}>
+          <form action="" className={styles.form_regis}>
+              <div className={styles.logo_container}>
+                <img className={styles.logo} src={logo} alt="logo" />
+              </div>
+              <h1 className={styles.form_heading}>
+                Buat akun dulu
+                <br />
+                untuk menikmati layanan kami
+              </h1>
+
+              <div className={styles.regis_input_field}>
+                <label className={styles.regis_label} htmlFor="name">Nama</label>
+                <input className={styles.regis_input} value={username} onChange={handleUsernameChange} type="text" name="" id="name" />
+                {usernameError && <label className={styles.on_error}>{errorMessages}</label>}
+              
+                <label className={styles.regis_label} htmlFor="email">Email</label>
+                <input className={styles.regis_input} value={email} onChange={handleEmailChange} type="text" name="" id="email" />
+                {emailError && <label className={styles.on_error}>{errorMessages}</label>}
+
+                <label className={styles.regis_label} htmlFor="password">Password</label>
+                <input className={styles.regis_input} value={password} onChange={handlePasswordChange} type="password" name="" id="password" />
+                {passwordError && <label className={styles.on_error}>{errorMessages}</label>}
+
+                <label className={styles.regis_label} htmlFor="confirm">Konfirmasi Password</label>
+                <input className={styles.regis_input} value={confirm} onChange={handleConfirmChange} type="password" name="" id="confirm" />
+                {confirmError && <label className={styles.on_error}>{errorMessages}</label>}
+
+                <div className={styles.regis_button_container}>
+                  <button className={styles.regis_button} onClick={handleSubmit}>Buat Akun</button>
                 </div>
-                <h1 className={styles.form_heading}>
-                  Buat akun dulu
-                  <br />
-                  untuk menikmati layanan kami
-                </h1>
+                <p className={styles.regis_p}>Sudah mempunyai akun? 
+                  <span className={styles.regis_p_span}>
+                    <a className={styles.login_anchor} href={`${import.meta.env.VITE_WEBSITE_URL}/login`}> Masuk disini</a>
+                  </span>
+                </p>
 
-                <div className={styles.regis_input_field}>
-                  <label className={styles.regis_label} htmlFor="name">Nama</label>
-                  <input className={styles.regis_input} value={username} onChange={handleUsernameChange} type="text" name="" id="name" />
-                  {usernameError && <label className={styles.on_error}>{errorMessages}</label>}
-                
-                  <label className={styles.regis_label} htmlFor="email">Email</label>
-                  <input className={styles.regis_input} value={email} onChange={handleEmailChange} type="text" name="" id="email" />
-                  {emailError && <label className={styles.on_error}>{errorMessages}</label>}
-
-                  <label className={styles.regis_label} htmlFor="password">Password</label>
-                  <input className={styles.regis_input} value={password} onChange={handlePasswordChange} type="password" name="" id="password" />
-                  {passwordError && <label className={styles.on_error}>{errorMessages}</label>}
-
-                  <label className={styles.regis_label} htmlFor="confirm">Konfirmasi Password</label>
-                  <input className={styles.regis_input} value={confirm} onChange={handleConfirmChange} type="password" name="" id="confirm" />
-                  {confirmError && <label className={styles.on_error}>{errorMessages}</label>}
-
-                  <div className={styles.regis_button_container}>
-                    <button className={styles.regis_button} onClick={handleSubmit}>Buat Akun</button>
-                  </div>
-                  <p className={styles.regis_p}>Sudah mempunyai akun? 
-                    <span className={styles.regis_p_span}>
-                      <a className={styles.login_anchor} href={`${import.meta.env.VITE_WEBSITE_URL}/login`}> Masuk disini</a>
-                    </span>
-                  </p>
-
-                </div>
-            </form>
-            <div className={styles.hero_container}>
-                <img className={styles.hero} src={`${import.meta.env.VITE_SERVER_URL}/assets/hero/login_regis.png`} alt="hero image" />
-            </div>
-        </div>
+              </div>
+          </form>
+          <div className={styles.hero_container}>
+              <img className={styles.hero} src={`${import.meta.env.VITE_SERVER_URL}/assets/hero/login_regis.png`} alt="hero image" />
+          </div>
+      </div>
     
     </>
   )
