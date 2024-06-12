@@ -1,40 +1,73 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
 import styles from './HeaderNavbar.module.css';
 import logo from './../../assets/logo/Logo.svg';
 import LoginButton from '../LoginButton/LoginButton';
-
+import ProfilePreview from '../ProfilePreview/ProfilePreview';
+import dropdownDefaultIcon from '../../assets/icon/arrow-down/arrow-down.svg';
+import dropdownHoverIcon from '../../assets/icon/arrow-down/arrow-down-hover.svg';
+import dropdownOpenIcon from '../../assets/icon/arrow-down/arrow-up.svg';
+import profile from '../../assets/user/0.png'
 
 
 export default function HeaderNavbar() {
+  const [dropdownIcon, setDropdownIcon] = React.useState(dropdownDefaultIcon);
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+  const [profilePicture, setProfilePicture] = React.useState(JSON.parse(localStorage.getItem('profile')));
+
+  const handleMouseEnter = () => {
+    if(!isDropdownOpen){
+      setDropdownIcon(dropdownHoverIcon);
+    }
+  }
+  const handleMouseLeave = () => {
+    if(!isDropdownOpen){
+      setDropdownIcon(dropdownDefaultIcon);
+    }
+  }
+  const handleOnClick = () => {
+    if (isDropdownOpen) {
+      setDropdownIcon(dropdownHoverIcon);
+    } else {
+      setDropdownIcon(dropdownOpenIcon);
+    }
+    setIsDropdownOpen(!isDropdownOpen);
+  }
+        
   return (
     <div className={styles.header_container}>
-    <Navbar expand="lg" className={styles.header}>
-      <Container>
-        <Navbar.Brand href="#">
-          <img src={logo} alt="Artraksi Logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"  className={styles.toglerr}  />
-        <Navbar.Collapse id="basic-navbar-n">
-          <Nav className="mx-auto text-center">
-            <Nav.Link href={`${import.meta.env.VITE_WEBSITE_URL}`} className={styles.navbar_text}>Beranda</Nav.Link>
-            <NavDropdown title="Layanan" id="basic-nav-dropdown" className={styles.navbar_text}>
-              <NavDropdown.Item href={`${import.meta.env.VITE_WEBSITE_URL}/artikel`} className={styles.dropdown_text}>Artikel</NavDropdown.Item>
-              <NavDropdown.Item href={`${import.meta.env.VITE_WEBSITE_URL}/komunitas`} className={styles.dropdown_text}>Komunitas</NavDropdown.Item>
-              <NavDropdown.Item href={`${import.meta.env.VITE_WEBSITE_URL}/blog`} className={styles.dropdown_text}>Blog</NavDropdown.Item>
-              <NavDropdown.Item href={`${import.meta.env.VITE_WEBSITE_URL}/kalender`} className={styles.dropdown_text}>Kalender</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href={`${import.meta.env.VITE_WEBSITE_URL}/tentang_kami`} className={styles.navbar_text}>Tentang Kami</Nav.Link>
-          </Nav>
-          <div className="text-center">
-            <LoginButton className={styles.login_button} />
-          </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <img src={logo} alt="Artraksi Logo" />
+
+      <nav className={styles.navbar_container}>
+        <ul className={styles.navbar}>
+          <li className={styles.nav_item}>
+            <a className={styles.nav_item_anchor} href={`${import.meta.env.VITE_WEBSITE_URL}/`}>beranda</a>
+          </li>
+
+          <li className={styles.nav_item}>
+            <div className={styles.dropdown_container}>
+              <a className={`${styles.nav_item_anchor} ${styles.dropdown} ${isDropdownOpen? styles.dropdown_active : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleOnClick} href={`#`}>layanan 
+                <span>
+                  <img className={styles.dropdown_icon} src={dropdownIcon} alt="dropdown icon" />
+                </span>
+              </a>
+              {isDropdownOpen && (
+                <div className={styles.dropdown_content}>
+                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/artikel`}>artikel</a>
+                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/komunitas`}>komunitas</a>
+                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/blog`}>blog</a>
+                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/kalender`}>kalender</a>
+                </div>
+              )}
+            </div>
+            
+          </li>
+
+          <li className={styles.nav_item}>
+            <a className={styles.nav_item_anchor} href={`${import.meta.env.VITE_WEBSITE_URL}/tentang_kami`}>tentang kami</a>
+          </li>
+        </ul>
+      </nav>
+      {(!profilePicture) ? (<LoginButton />) : (<ProfilePreview img={`${import.meta.env.VITE_SERVER_URL}/${profilePicture}`} />)}
   </div>
   
   );

@@ -45,10 +45,10 @@ export default function LoginPage() {
       identifire: identifire,
       password: password
     }).then((res) => {
-      sessionStorage.setItem("username", res.data.username);
-      sessionStorage.setItem("email", res.data.email);
-      sessionStorage.setItem("profile", res.data.profile_img);
-      sessionStorage.setItem("id", res.data.id);
+      localStorage.setItem("username", JSON.stringify(res.data.username));
+      localStorage.setItem("email", JSON.stringify(res.data.email));
+      localStorage.setItem("profile", JSON.stringify(res.data.profile_img));
+      localStorage.setItem("id", JSON.stringify(res.data.id));
 
       navigate("/");
 
@@ -96,7 +96,7 @@ export default function LoginPage() {
                 {passwordError && <label className={styles.on_error}>{errorMessages}</label>}
 
                 <div className={styles.login_button_container}>
-                  <button className={styles.login_button} onClick={handleSubmit}>Buat Akun</button>
+                  <button className={styles.login_button} onClick={handleSubmit}>Masuk</button>
                 </div>
 
                 <p className={styles.login_p}>Belum mempunyai akun? 
