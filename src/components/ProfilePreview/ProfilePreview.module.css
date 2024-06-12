@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    }
+    
+.profile{
+    width: 4rem;
+    height: 4rem;
+    border: solid 3px #BDBDBD;    
+    border-radius: 100px;
+    object-fit:fill;   
+}
+
+.profile:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
