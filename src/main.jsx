@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home/Home.jsx";
-import Login from "./routes/loginregis/Login.jsx";
+import LoginPage from "./routes/LoginPage/LoginPage.jsx";
 import RegisPage from "./routes/RegisPage/RegisPage.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <LoginPage />,
   },
   {
     path: "/regis",
