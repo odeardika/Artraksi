@@ -1,0 +1,212 @@
+.blog .trending h1{
+    font-size: 50px;
+    font-weight: 500px;
+    margin-bottom: 10px;
+}
+
+.blog .trending .row:nth-child(2) .col{
+    background: #fff;
+    padding: 0%;
+}
+
+.blog .trending .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-inline: 10px;
+}
+
+.blog .trending .row:nth-child(2) .poto{
+    height: 225px;
+}
+
+.blog .trending .profil{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+}
+.blog .trending .iconbetwen{
+    font-size: 20px;
+}
+
+.blog .trending .icons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+
+}
+
+.blog .trending .row:nth-child(2) .pembaca{
+    color: #a78c8c;
+}
+
+.blog .trending .row:nth-child(2) .titles{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+
+
+}
+
+.blog .trending .row:nth-child(2) .desk{
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.blog .trending .row:nth-child(2) .btn-custom {
+    background: none;
+    border: none;
+    color: inherit; 
+    cursor: pointer;
+    padding: 0;
+}
+
+/* UNTUKMU */
+.blog .untukmu{
+    background: #EDF3F4;
+}
+
+.blog .untukmu .pilihan{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        column-gap: 40px;
+}
+
+.blog .untukmu .pilihan h1{
+    font-size: 50px;
+    font-weight: 500px;
+    position: relative; 
+    cursor: pointer; 
+}
+
+
+.blog .untukmu .pilihan h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px; 
+    width: 0;
+    height: 9px; 
+    background-color: #216162; 
+    transition: width 0.3s ease; 
+}
+
+.blog .untukmu .pilihan h1:hover::after {
+    width: 100%; 
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+  
+}
+
+.search-input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+   
+    border-radius: 6px 6px 6px 6px;
+    outline: none;
+}
+
+
+@media screen and (max-width: 992px) {
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .search-input,
+    .search-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .blog .untukmu .pilihan {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .blog .untukmu .pilihan h1 {
+        font-size: 45px; 
+    }
+
+    .blog .untukmu .pilihan h1::after {
+        bottom: -3px; 
+        height: 5px; 
+    }
+}
+
+.blog .untukmu .profils{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.blog .untukmu .row:nth-child(2) .col{
+    background: #fff;
+    padding: 0%;
+}
+
+.blog .untukmu .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-inline: 10px;
+}
+
+.blog .untukmu .row:nth-child(2) .potos{
+    width: 100%;
+    height: 225px;
+}
+
+
+
+
+.blog .untukmu .iconbetwen{
+    font-size: 20px;
+}
+
+.blog .untukmu .icons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+
+}
+
+.blog .untukmu .row:nth-child(2) .pembaca{
+    color: #a78c8c;
+}
+
+.blog .untukmu .row:nth-child(2) .titles{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+
+
+}
+
+.blog .untukmu .row:nth-child(2) .desk{
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.blog .untukmu .row:nth-child(2) .btn-custom {
+    background: none;
+    border: none;
+    color: inherit; 
+    cursor: pointer;
+    padding: 0;
+}

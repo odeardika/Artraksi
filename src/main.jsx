@@ -7,7 +7,7 @@ import Home from "./routes/Home/Home.jsx";
 import LoginPage from "./routes/LoginPage/LoginPage.jsx";
 import RegisPage from "./routes/RegisPage/RegisPage.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
-import BlogPage from "./routes/BlogPage.jsx";
+import BlogPage  from "./routes/BlogPage/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
 import Calender from "./routes/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: <DetailComunity />,
   },
   {
-    path: "/blog",
+    path: "routes/BlogPage",
     element: <BlogPage />,
   },
   {
