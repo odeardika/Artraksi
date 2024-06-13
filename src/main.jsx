@@ -13,6 +13,7 @@ import Calender from "./routes/KalenderPage/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
+import DetailKalenderPage from "./routes/Kalender/DetailKalenderPage.jsx";
 
 
 
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
   {
     path: "/tentang_kami",
     element: <TentangKamiPage />
-  }
+  },
+  {
+    path: "/DetailKalender",
+    element: <DetailKalenderPage/>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
