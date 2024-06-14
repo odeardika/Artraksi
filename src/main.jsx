@@ -12,7 +12,7 @@ import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
-import DetailKalenderPage from "./routes/Kalender/DetailKalenderPage.jsx";
+import DetailEventPage from './routes/DetailEventPage/DetailEventPage.jsx';
 import EventPage from "./routes/EventPage/EventPage.jsx";
 
 
@@ -59,8 +59,8 @@ const router = createBrowserRouter([
     element: <TentangKamiPage />
   },
   {
-    path: "/DetailKalender",
-    element: <DetailKalenderPage/>
+    path: "/acara/:id",
+    element: <DetailEventPage/>
   },
 ]);
 
