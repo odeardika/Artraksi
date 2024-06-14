@@ -55,7 +55,7 @@ export default function HeaderNavbar() {
                   <a href={`${import.meta.env.VITE_WEBSITE_URL}/artikel`}>artikel</a>
                   <a href={`${import.meta.env.VITE_WEBSITE_URL}/komunitas`}>komunitas</a>
                   <a href={`${import.meta.env.VITE_WEBSITE_URL}/blog`}>blog</a>
-                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/kalender`}>kalender</a>
+                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/acara`}>acara</a>
                 </div>
               )}
             </div>

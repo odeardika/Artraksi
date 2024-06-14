@@ -1,37 +1,37 @@
-.kalender .terbaru h1{
+.event .terbaru h1{
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 10px;
    
 }
 
-.kalender .terbaru .row:nth-child(2) {
+.event .terbaru .row:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding-inline: 10px;
 }
 
-.kalender .terbaru .row:nth-child(2) .col{
+.event .terbaru .row:nth-child(2) .col{
     background: #fff;
     padding: 0;
 }
 
-.kalender .terbaru .row:nth-child(2) img{
+.event .terbaru .row:nth-child(2) img{
     height: 300px;
 }
 
-.kalender .terbaru .row:nth-child(2) h5{
+.event .terbaru .row:nth-child(2) h5{
     font-size: 25px;
     font-weight: 700;
 }
 
-.kalender .terbaru .row:nth-child(2) .ket{
+.event .terbaru .row:nth-child(2) .ket{
     line-height: 10px;
     font-size: 18px;
 }
 
-.kalender .terbaru .row:nth-child(2) .btn-transparent-custom {
+.event .terbaru .row:nth-child(2) .btn-transparent-custom {
     background: none;
     border: none;
     color: inherit; /* Atur warna teks sesuai dengan konteksnya */
@@ -43,10 +43,10 @@
 }
 
 /* acara */
-.kalender .acara{
+.event .acara{
     background: #EDF3F4;
 }
-.kalender .acara h1{
+.event .acara h1{
     font-size: 50px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -54,14 +54,14 @@
    
 }
 
-.kalender .search-container {
+.event .search-container {
     display: flex;
     align-items: left;
     margin-top: 20px;
     
 }
 
-.kalender .search-input {
+.event .search-input {
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -72,33 +72,33 @@
 
 
 
-.kalender .acara .row:nth-child(2) {
+.event .acara .row:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     padding-inline: 10px;
 }
 
-.kalender .acara .row:nth-child(2) .col{
+.event .acara .row:nth-child(2) .col{
     background: #EDF3F4;
     padding: 0;
 }
 
-.kalender .acara .row:nth-child(2) img{
+.event .acara .row:nth-child(2) img{
     height: 300px;
 }
 
-.kalender .acara .row:nth-child(2) h5{
+.event .acara .row:nth-child(2) h5{
     font-size: 25px;
     font-weight: 700;
 }
 
-.kalender .acara .row:nth-child(2) .ket{
+.event .acara .row:nth-child(2) .ket{
     line-height: 10px;
     font-size: 18px;
 }
 
-.kalender .acara .row:nth-child(2) .btn-transparent-custom {
+.event .acara .row:nth-child(2) .btn-transparent-custom {
     background: none;
     border: none;
     color: inherit; /* Atur warna teks sesuai dengan konteksnya */
@@ -109,7 +109,7 @@
     color: rgb(121, 116, 110);
 }
 @media screen and (max-width: 992px) {
-    .kalender .acara .row:nth-child(1) col{
+    .event .acara .row:nth-child(1) col{
         justify-content: center; /* Pusatkan elemen pencarian */
     }
 }
