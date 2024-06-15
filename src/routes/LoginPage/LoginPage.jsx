@@ -45,13 +45,9 @@ export default function LoginPage() {
       identifire: identifire,
       password: password
     }).then((res) => {
-      sessionStorage.setItem("username", JSON.stringify(res.data.username));
-      sessionStorage.setItem("email", JSON.stringify(res.data.email));
-      sessionStorage.setItem("profile", JSON.stringify(res.data.profile_img));
-      sessionStorage.setItem("id", JSON.stringify(res.data.id));
+      sessionStorage.setItem("token", JSON.stringify(res.data.Authorization));
 
       navigate("/");
-
 
     }).catch((err) => {
       console.log(err.response.data);

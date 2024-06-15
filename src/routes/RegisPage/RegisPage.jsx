@@ -68,14 +68,10 @@ export default function RegisPage() {
     })
     .then((res) => {
       console.log(res.data);
-      sessionStorage.setItem("username", JSON.stringify(res.data.username));
-      sessionStorage.setItem("email", JSON.stringify(res.data.email));
-      sessionStorage.setItem("profile", JSON.stringify(res.data.profile_img));
-      sessionStorage.setItem("id", JSON.stringify(res.data.id));
+      sessionStorage.setItem("token", JSON.stringify(res.data.Authorization));
 
       return navigate(`/`);
 
-      
     })
     .catch((err) => {
       console.error(err.response.data.message);

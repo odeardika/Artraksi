@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import clockIcon from '../../assets/icon/clock.svg';
 import ReminderButton from '../../components/ReminderButton/ReminderButton';
 import HeaderNavbar from '../../components/HeaderNavbar/HeaderNavbar';
@@ -16,8 +16,7 @@ function DetailEventPage() {
     const [gallery, setGallery] = React.useState([]);
     const [schedules, setSchedules] = React.useState([]);
     const [isReminderOn, setIsReminderOn] = React.useState(false);
-    const [userId, setUserId] = React.useState(JSON.parse(sessionStorage.getItem('id')));
-    const [reminderId,setReminderId] = React.useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`${backendURL}/events/${id}`)
@@ -31,48 +30,54 @@ function DetailEventPage() {
     //* HANDLE USER REMAINDER
     useEffect(() => {
         // check if user logged in
-        if(!userId) return setIsReminderOn(false);
+        if(!JSON.parse(sessionStorage.getItem('token'))) return setIsReminderOn(false);
+
 
         // check if user have reminder in this event
-        axios.post(`${backendURL}/events/reminder/check`, {
-            event_id: id,
-            user_id: userId
-        }).then((response) => {
+        axios.get(`${backendURL}/events/reminder/check/${id}`,{
+            headers: {
+                'Authorization' : JSON.parse(sessionStorage.getItem('token'))
+            }
+        })
+        .then((response) => {
             // check reminder if user already have this remainder
             setIsReminderOn(response.data.is_remainder);
-            setReminderId(response.data.remaider_id);
         })
     }, [])
 
     //* HANDLE MODIFY REMAINDER
     const handleReminder = () => {
         // check if user logged in
-        
-        if(!userId) return; //TODO send to login page
+        if(!JSON.parse(sessionStorage.getItem('token'))) return navigate('/login'); //TODO send to login page
 
         // remind this event to currect user 
         if(!isReminderOn){
             // send the request to server and save reminder into database
             axios.post(`${backendURL}/events/reminder`, {
                 event_id: id,
-                user_id: userId
+            }, {
+                headers: {
+                    'Authorization' : JSON.parse(sessionStorage.getItem('token'))
+                }
             })
             // update current reminder
             .then((response) => {
                 setIsReminderOn(true);
-                setReminderId(response.data.insertId);
             })
         }
 
         // delete current reminder
         if(isReminderOn){
             // send the request to server and delete reminder
-            axios.delete(`${backendURL}/events/reminder/${reminderId}`)
+            axios.delete(`${backendURL}/events/reminder/${id}`,{
+                headers: {
+                    'Authorization' : JSON.parse(sessionStorage.getItem('token'))
+                }
+            })
             
             // update current reminder
             .then((response) => {
                 setIsReminderOn(false);
-                setReminderId(null);
             })
         }
 
