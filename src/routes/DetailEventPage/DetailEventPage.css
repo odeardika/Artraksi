@@ -97,11 +97,26 @@
 .schedule-container .time img{
   width: 20px;
 }
+/* jadwal acara end */
 
+/* Simpan Acara  */
+.reminder {
+  background-color: #EDF3F4;
+  padding-bottom: 3rem;
+}
 
- /* jadwal acara end */
+.reminder h2{
+  padding: 5rem 0 1rem 0;
+  font-size: 50px;
+  font-weight: 700;
+}
 
- /* Simpan Acara  */
+.reminder p{
+  color: #5E5E5E;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .acara .simpan{
     background: #ccbdbd;
 }

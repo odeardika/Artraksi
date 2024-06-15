@@ -2,11 +2,23 @@ import React, { useEffect } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
 import clockIcon from '../../assets/icon/clock.svg';
+import ReminderButton from '../../components/ReminderButton/ReminderButton';
+import HeaderNavbar from '../../components/HeaderNavbar/HeaderNavbar';
 import "./DetailEventPage.css";
 import axios from 'axios';
 
-
-
+// const updateRemainderFunc = (id, userId) => {
+//     axios.post(`${import.meta.env.VITE_SERVER_URL}/events/reminder/check`, {
+//         event_id: id,
+//         user_id: userId
+//     }).then((response) => {
+//         setIsReminderOn(response.data.is_remainder);
+//         setReminderUpdate(response.data.remaider_id);
+//         console.log(response.data)
+//     }).catch((err) => {
+//         console.log(err)
+//     })
+// }
 
 function DetailEventPage() {
     const { id } = useParams();
@@ -15,6 +27,9 @@ function DetailEventPage() {
     const [event, setEvent] = React.useState({});
     const [gallery, setGallery] = React.useState([]);
     const [schedules, setSchedules] = React.useState([]);
+    const [isReminderOn, setIsReminderOn] = React.useState(false);
+    const [userId, setUserId] = React.useState(JSON.parse(sessionStorage.getItem('id')));
+    const [reminderId,setReminderId] = React.useState(null);
 
     useEffect(() => {
         axios.get(`${backendURL}/events/${id}`)
@@ -23,7 +38,59 @@ function DetailEventPage() {
             setGallery(response.data.gallery);
             setSchedules(response.data.schedule);
         })
-    })
+    }, [])
+
+    //* HANDLE USER REMAINDER
+    useEffect(() => {
+        // check if user logged in
+        if(!userId) return setIsReminderOn(false);
+
+        // check if user have reminder in this event
+        axios.post(`${backendURL}/events/reminder/check`, {
+            event_id: id,
+            user_id: userId
+        }).then((response) => {
+            // check reminder if user already have this remainder
+            setIsReminderOn(response.data.is_remainder);
+            setReminderId(response.data.remaider_id);
+        })
+    }, [])
+
+    //* HANDLE MODIFY REMAINDER
+    const handleReminder = () => {
+        // check if user logged in
+        
+        if(!userId) return; //TODO send to login page
+
+        // remind this event to currect user 
+        if(!isReminderOn){
+            // send the request to server and save reminder into database
+            axios.post(`${backendURL}/events/reminder`, {
+                event_id: id,
+                user_id: userId
+            })
+            // update current reminder
+            .then((response) => {
+                setIsReminderOn(true);
+                setReminderId(response.data.insertId);
+            })
+        }
+
+        // delete current reminder
+        if(isReminderOn){
+            // send the request to server and delete reminder
+            axios.delete(`${backendURL}/events/reminder/${reminderId}`)
+            
+            // update current reminder
+            .then((response) => {
+                setIsReminderOn(false);
+                setReminderId(null);
+            })
+        }
+
+    }
+    
+
   return (
     <div className='acara'>
         <style>
@@ -40,6 +107,7 @@ function DetailEventPage() {
             `}
         </style>
         <div className='hero min-vh-100 w-100'>
+            <HeaderNavbar />
             <Container>
                 <Row>
                     <Col className='text-white'>
@@ -67,16 +135,16 @@ function DetailEventPage() {
         <div className="galeri min-vh-100 w-100 py-5">
             <Container>
                 <Row>
-                    <Col className='py-3'>
+                    <div className='py-3'>
                     <h1>Galeri Acara</h1>
-                    </Col>
+                    </div>
                 </Row>
                 <Row>
                     {gallery.map((data) => {
                         return  (
-                        <Col key={data.id} >
+                        <div key={data.id} >
                              <img src={`${backendURL}/${data.img_url}`} alt="gallery image" className='w-100 mb-2' />
-                        </Col>
+                        </div>
                         );  
                     })}
                 </Row>
@@ -84,11 +152,11 @@ function DetailEventPage() {
         </div>
         <div className="schedule w-100 min-vh-75">
             <Container>
-                <Row>
-                    <Col className='pt-5 pb-5'>
+
+                    <div className='pt-5 pb-5'>
                     <h1>Jadwal Acara</h1>
-                    </Col>
-                </Row>
+                    </div>
+
                 <section className='schedule-section'>
                     {schedules.map((schedule) => {
                         return(
@@ -104,16 +172,11 @@ function DetailEventPage() {
                 </section>
             </Container>
         </div>
-        <div className="simpan w-100">
+        <div className="reminder">
             <Container>
-                <Row>
-                    <Col className='py-5'>
-                    <h1>Simpan Acara</h1>
-                    <p>Aktifkan pengingat untuk memberikan notifikasi saat acara sudah dekat.</p>
-                    <button className="btn btn-transparent btn-lg rounded-3 me-2"><i className="fa-regular fa-bell me-2"></i>Pengingat</button> <i className="fa-regular fa-bookmark fa-1X "></i>
-
-                    </Col>
-                </Row>
+                <h2>Simpan Acara</h2>
+                <p>Aktifkan pengingat untuk memberikan notifikasi saat acara sudah dekat.</p>
+                {isReminderOn? <ReminderButton isOn={true} onClickHandler={handleReminder}/> : <ReminderButton isOn={false} onClickHandler={handleReminder}/>}
             </Container>
         </div>
 
