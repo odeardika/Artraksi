@@ -66,11 +66,19 @@
   padding-bottom: 5rem;
 }
 
+.schedule h1 {
+  font-weight: 700;
+}
+
 .schedule-container .time{
   display: flex;
   gap: 12px;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+.schedule-container{
+  padding-bottom: 1rem;
 }
 
 .schedule-container p{

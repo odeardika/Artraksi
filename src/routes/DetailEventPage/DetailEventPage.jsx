@@ -82,7 +82,7 @@ function DetailEventPage() {
                 </Row>
             </Container>
         </div>
-        <div className="jadwal w-100 min-vh-75">
+        <div className="schedule w-100 min-vh-75">
             <Container>
                 <Row>
                     <Col className='pt-5 pb-5'>
