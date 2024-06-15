@@ -59,7 +59,7 @@ export default function EventPage() {
               {upcomingEvents.map((data) => {
                 return (
                   <div key={data.id} className="event-container">
-                    <img src={`${import.meta.env.VITE_SERVER_URL}/${data.event_thumbnail}`} alt={`${data.title} image`} className=""/>
+                    <img src={`${import.meta.env.VITE_SERVER_URL}/${data.event_thumbnail}`} loading="lazy" alt={`${data.title} image`} className=""/>
                     <div className="event-detail">
                       <h5 className="">{data.title}</h5>
                       <p>{data.event_date} - Selesai</p>

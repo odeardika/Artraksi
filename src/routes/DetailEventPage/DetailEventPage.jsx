@@ -6,19 +6,7 @@ import ReminderButton from '../../components/ReminderButton/ReminderButton';
 import HeaderNavbar from '../../components/HeaderNavbar/HeaderNavbar';
 import "./DetailEventPage.css";
 import axios from 'axios';
-
-// const updateRemainderFunc = (id, userId) => {
-//     axios.post(`${import.meta.env.VITE_SERVER_URL}/events/reminder/check`, {
-//         event_id: id,
-//         user_id: userId
-//     }).then((response) => {
-//         setIsReminderOn(response.data.is_remainder);
-//         setReminderUpdate(response.data.remaider_id);
-//         console.log(response.data)
-//     }).catch((err) => {
-//         console.log(err)
-//     })
-// }
+import FooterComponent from '../../components/FooterComponent/FooterComponent';
 
 function DetailEventPage() {
     const { id } = useParams();
@@ -100,9 +88,10 @@ function DetailEventPage() {
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
-                    padding-top: 500px;
-                    font-style: italic;
-                }
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    }
             
             `}
         </style>
@@ -111,7 +100,7 @@ function DetailEventPage() {
             <Container>
                 <Row>
                     <Col className='text-white'>
-                        <h1>{event.title}</h1>
+                        <h1><i>{event.title}</i></h1>
                     </Col>
                 </Row>
             </Container>
@@ -127,7 +116,7 @@ function DetailEventPage() {
                         <i className="fa-solid fa-location-dot fa-2x ms-4 me-3"></i>
                          {event.event_location_detail} {event.event_location}
                     </p>
-                    <p className='deskp pb-5'>Dalam acara Gladhi Madya disajikan beberapa tarian yaitu Tari Putri Gambyong Pareanom, Tari Putri Golek Manis, Tari Putri Dombanini dan Tari Putra Gunung Sari yang dikemas dalam bentuk repertoar drama. Dalam acara Gladhi Madya disajikan beberapa tarian yaitu Tari Putri Gambyong Pareanom, Tari Putri Golek Manis, Tari Putri Dombanini dan Tari Putra Gunung Sari yang dikemas dalam bentuk repertoar drama.</p>
+                    <p className='deskp pb-5'>{event.event_description}</p>
                     </Col>
                 </Row>
             </Container>
@@ -143,7 +132,7 @@ function DetailEventPage() {
                     {gallery.map((data) => {
                         return  (
                         <div key={data.id} >
-                             <img src={`${backendURL}/${data.img_url}`} alt="gallery image" className='w-100 mb-2' />
+                             <img src={`${backendURL}/${data.img_url}`} alt="gallery image" loading='lazy' className='w-100 mb-2' />
                         </div>
                         );  
                     })}
@@ -179,7 +168,7 @@ function DetailEventPage() {
                 {isReminderOn? <ReminderButton isOn={true} onClickHandler={handleReminder}/> : <ReminderButton isOn={false} onClickHandler={handleReminder}/>}
             </Container>
         </div>
-
+        <FooterComponent />
     </div>
    
   )
