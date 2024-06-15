@@ -6,7 +6,6 @@ import ProfilePreview from '../ProfilePreview/ProfilePreview';
 import dropdownDefaultIcon from '../../assets/icon/arrow-down/arrow-down.svg';
 import dropdownHoverIcon from '../../assets/icon/arrow-down/arrow-down-hover.svg';
 import dropdownOpenIcon from '../../assets/icon/arrow-down/arrow-up.svg';
-import profile from '../../assets/user/0.png'
 
 
 export default function HeaderNavbar() {
