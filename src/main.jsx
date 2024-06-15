@@ -13,6 +13,8 @@ import Calender from "./routes/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
+import PopUp from "./routes/BlogPage/PopUp.jsx";
+// import App from "./routes/BlogPage/App.jsx";
 
 
 
@@ -41,6 +43,11 @@ const router = createBrowserRouter([
     path: "routes/BlogPage",
     element: <BlogPage />,
   },
+  {
+    path: "routes/PopUp",
+    element: <PopUp />,
+  },
+ 
   {
     path: "/artikel",
     element: <ArticlePage />,
