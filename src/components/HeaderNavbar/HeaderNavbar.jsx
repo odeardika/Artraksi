@@ -12,7 +12,7 @@ import profile from '../../assets/user/0.png'
 export default function HeaderNavbar() {
   const [dropdownIcon, setDropdownIcon] = React.useState(dropdownDefaultIcon);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
-  const [profilePicture, setProfilePicture] = React.useState(JSON.parse(localStorage.getItem('profile')));
+  const [profilePicture, setProfilePicture] = React.useState(JSON.parse(sessionStorage.getItem('profile')));
 
   const handleMouseEnter = () => {
     if(!isDropdownOpen){

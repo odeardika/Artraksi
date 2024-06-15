@@ -1,0 +1,49 @@
+/* Button Off Style */
+.reminder-button{
+    display: flex;
+    align-items: center;
+    color: #23766C;
+    border: none;
+    border: #23766C solid 3px;
+    padding: 0.8rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.reminder-button label{
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.reminder-button:hover{
+    background-color: #23766C;
+    color: white;
+    cursor: pointer;
+}
+
+/* Button On Style */
+
+.reminder-button-on{
+    display: flex;
+    align-items: center;
+    color: #23766C;
+    border: none;
+    border: #23766C solid 3px;
+    padding: 0.8rem;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    background-color: #23766C;
+    color: white;
+}
+
+.reminder-button-on label{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.reminder-button-on:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}

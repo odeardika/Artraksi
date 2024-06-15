@@ -1,15 +1,7 @@
 /* hero */
-.acara .hero{
-    background-image: url("../../assets/kalender/hero kalender.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 500px;
-    font-style: italic;
-    
-}
+
 .acara .hero h1{
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 700;
 }
 
@@ -37,7 +29,7 @@
   }
  
   .acara .desk .col .deskp{
-    color: #967c7c;
+    color: #5E5E5E;
     font-size: 20px;
   }
 
@@ -46,7 +38,7 @@
    /* galeri */
 
   .acara .galeri{
-    background: #e0dddd;
+    background: #EDF3F4;
   }
 
   .acara .galeri h1{
@@ -70,28 +62,61 @@
     /* galeri end */
 
  /* jadwal acara  */
-.acara .jadwal h1{
-    font-size: 50px;
-    font-weight: 700;
+.schedule-section{
+  padding-bottom: 5rem;
 }
 
-.acara .jadwal .info{
-    display: flex;
-    flex-direction: column;
-    line-height: 1rem;
+.schedule h1 {
+  font-weight: 700;
 }
 
-.acara .jadwal .info .desk{
-    color: #5E5E5E;
-    font-size: 20px;
-    font-weight: 500;
+.schedule-container .time{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
+.schedule-container{
+  padding-bottom: 1rem;
+}
 
+.schedule-container p{
+  font-size: 36px;
+  font-weight: 600;
+  color: #5E5E5E;
+}
 
- /* jadwal acara end */
+.schedule-container .time p{
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 30px;
+  color: #000;
+}
 
- /* Simpan Acara  */
+.schedule-container .time img{
+  width: 20px;
+}
+/* jadwal acara end */
+
+/* Simpan Acara  */
+.reminder {
+  background-color: #EDF3F4;
+  padding-bottom: 3rem;
+}
+
+.reminder h2{
+  padding: 5rem 0 1rem 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.reminder p{
+  color: #5E5E5E;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .acara .simpan{
     background: #ccbdbd;
 }
