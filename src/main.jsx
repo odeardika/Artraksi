@@ -14,6 +14,8 @@ import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
 import DetailKalenderPage from "./routes/Kalender/DetailKalenderPage.jsx";
 import EventPage from "./routes/EventPage/EventPage.jsx";
+import DetailBlog from "./routes/DetailBlog/DetailBlog.jsx";
+
 
 
 
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <BlogPage />,
+  },
+  {
+    path: "routes/Detailblog",
+    element: <DetailBlog />,
   },
   {
     path: "/artikel",

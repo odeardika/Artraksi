@@ -1,0 +1,251 @@
+/* USER PROFIL */
+.detail .user .profil{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.detail .user .profil-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 70px;
+}
+
+.detail .user .profil-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.detail .user .profil-name {
+    display: flex;
+    align-items: center;
+}
+
+.detail .user .profil-name p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.detail .user .profil-name .profil-follow{
+    color: blueviolet;
+    margin-left: 10px;
+}
+
+.detail .user .profil-status{
+    color: grey;
+    font-size: 12px;
+}
+
+/* USER PROFIL END */
+
+/* HERO */
+
+.detail .hero{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.detail .hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* HERO END */
+/* DESKROPSI */
+
+.detail .desk{
+    padding: 5px;
+}
+
+.detail .desk h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.detail .desk p{
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+
+
+/* COMMENT SECTION */
+
+
+.comment-section {
+    padding: 20px;
+  }
+  
+  .comment-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .comment-input img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comment-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    background: #969696;
+  }
+  
+  .comment-input button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .comments .comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .comments .comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comments .comment-content {
+    flex: 1;
+  }
+  
+  .comments .comment-header h4 {
+    margin: 0;
+  }
+  
+  .comments .comment-footer {
+    display: flex;
+    gap: 10px;
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .comment-like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .comment-like svg {
+    fill: red;
+  }
+  
+
+/* COMMENT SECTION END */
+
+/* BLOG */
+.detail .blog{
+    background: #EDF3F4;
+}
+
+.detail .blog h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+}
+
+.detail .blog p{
+    font-size: 17px;
+    font-weight: 450;
+    /* margin-top: 20px; */
+}
+
+
+
+
+
+.detail .blog .profils{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.detail .blog .row:nth-child(2) .col{
+    background: #fff;
+    padding: 0%;
+}
+
+.detail .blog .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-inline: 10px;
+}
+
+.detail .blog .row:nth-child(2) .potos{
+    width: 100%;
+    height: 225px;
+}
+
+
+
+
+.detail .blog .iconbetwen{
+    font-size: 20px;
+}
+
+.detail .blog .icons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+
+}
+
+.detail .blog .row:nth-child(2) .pembaca{
+    color: #a78c8c;
+}
+
+.detail .blog .row:nth-child(2) .titles{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+
+
+}
+
+.detail .blog .row:nth-child(2) .desk{
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.detail .blog .row:nth-child(2) .btn-custom {
+    background: none;
+    border: none;
+    color: inherit; 
+    cursor: pointer;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+/* BLOG END */
+
