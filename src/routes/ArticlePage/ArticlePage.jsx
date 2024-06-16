@@ -65,9 +65,15 @@ export default function ArticlePage() {
           <h2>Artikel Terbaru</h2>
           <SearchBar handleSearch={handleSearch}/>
         </div>
-        <div className={styles.newest_article_container}>
+        {(listArticle.length > 0)? (
+          <div className={styles.newest_article_container}>
           {listArticle.map((article, index) => <ArticleWideCard key={index} props={article} />)}
         </div>
+        ) : (
+          <div className={styles.newest_article_container}>
+            <p className={styles.no_article}>Artikel tidak ditemukan</p>
+          </div>
+        )}
       </section>
       <section className={styles.tranding_container}>
         <h2>Trending Artikel</h2>
