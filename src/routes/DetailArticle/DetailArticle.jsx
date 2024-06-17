@@ -3,9 +3,10 @@ import styles from './DetailArticle.module.css';
 import Header from '../../components/Header/Header';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import likeIcon from '../../assets/icon/like/off.svg';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
 import FooterComponent from '../../components/FooterComponent/FooterComponent';
+import likeIconOff from '../../assets/icon/like/off.svg';
+import likeIconOn from '../../assets/icon/like/on.svg';
 
 export default function DetailArticle() {
     const { id } = useParams();
@@ -14,24 +15,81 @@ export default function DetailArticle() {
     const [article, setArticle] = React.useState({});
     const [content, setContent] = React.useState([]);
     const [recomendation, setRecomendation] = React.useState([]);
+    const [isFavorite, setIsFavorite] = React.useState(false);
+    const [like, setLike] = React.useState(0);
 
     React.useEffect(() => {
         axios.get(`${backendURL}/articles/${id}`)
         .then((response) => {
             setArticle(response.data);
-        });
+            setLike(response.data.likes);
+            //* check if user logined
+            if(!JSON.parse(sessionStorage.getItem('token'))) return setIsFavorite(false);
+
+
+            //* check if user like the article
+            axios.get(`${backendURL}/articles/favorite/check/${response.data.id}`, {
+                headers: {
+                    Authorization: JSON.parse(sessionStorage.getItem('token'))
+                }
+            })
+            
+            //* set like icon
+            .then((response) => {
+                setIsFavorite(response.data.is_favorite);
+            })
+
+        })
 
         axios.get(`${backendURL}/articles/contents/${id}`)
         .then((response) => {
-            setContent(response.data);
+            setContent(response.data)
         });
 
         axios.get(`${backendURL}/articles/recomendation/${id}`)
         .then((response) => {
-            console.log(response.data);
             setRecomendation(response.data);
         });
     }, []);
+
+    const handleFavorite = () => {
+        //* check if user logined
+        if(!JSON.parse(sessionStorage.getItem('token'))) return navigate('/login');
+        
+        //* check the currect like state
+        if(isFavorite) {
+            //* send the request to server and delete like from database
+            axios.delete(`${backendURL}/articles/favorite/${article.id}`, {
+                headers: {
+                    Authorization: JSON.parse(sessionStorage.getItem('token'))
+                }
+            })
+
+            //* update current like state
+            .then((response) => {
+                setIsFavorite(false);
+                setLike(like - 1);
+            })
+            
+        }else{
+            //* send the request to server and save like into database
+            axios.post(`${backendURL}/articles/favorite`, {
+                article_id: article.id
+            }, {
+                headers: {
+                    Authorization: JSON.parse(sessionStorage.getItem('token'))
+                }
+            })
+            
+            //* update current like state
+            .then((response) => {
+                setIsFavorite(true);
+                setLike(like + 1);
+            })
+        }
+    }
+
+
   return (
     <>
         <Header />
@@ -45,8 +103,8 @@ export default function DetailArticle() {
                 </div>
             </div>
             <div className={styles.other_detail}>
-                <img src={likeIcon} alt="like icon" />
-                <p>0</p>
+            <img className={styles.like} src={isFavorite ? likeIconOn : likeIconOff} onClick={handleFavorite} alt="like icon" />
+                <p className={styles.like_count}>{like}</p>
             </div>
         </div>
 
