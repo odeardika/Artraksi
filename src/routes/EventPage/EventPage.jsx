@@ -42,7 +42,6 @@ export default function EventPage() {
       console.log(err);
     })
 
-    console.log("axios")
   }, []);
   return (
     <>

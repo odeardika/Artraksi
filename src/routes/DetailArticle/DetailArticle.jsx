@@ -3,7 +3,7 @@ import styles from './DetailArticle.module.css';
 import Header from '../../components/Header/Header';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import likeIcon from '../../assets/icon/like.svg';
+import likeIcon from '../../assets/icon/like/off.svg';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
 import FooterComponent from '../../components/FooterComponent/FooterComponent';
 
