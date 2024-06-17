@@ -15,6 +15,7 @@ export default function HeaderNavbar() {
   const [profilePicture, setProfilePicture] = React.useState("");
 
   React.useEffect(() => {
+    if(!JSON.parse(sessionStorage.getItem('token'))) return;
     axios.get(`${import.meta.env.VITE_SERVER_URL}/user/profile`, {
       headers: {
         'Authorization' : JSON.parse(sessionStorage.getItem('token'))
