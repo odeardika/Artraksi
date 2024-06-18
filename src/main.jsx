@@ -8,11 +8,13 @@ import UserProfile from "./routes/UserProfile/UserProfile.jsx";
 import LoginPage from "./routes/LoginPage/LoginPage.jsx";
 import RegisPage from "./routes/RegisPage/RegisPage.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
-import BlogPage from "./routes/BlogPage.jsx";
+import BlogPage  from "./routes/BlogPage/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
+import PopUp from "./routes/BlogPage/PopUp.jsx";
+// import App from "./routes/BlogPage/App.jsx";
 import DetailEventPage from './routes/DetailEventPage/DetailEventPage.jsx';
 import EventPage from "./routes/EventPage/EventPage.jsx";
 
@@ -44,9 +46,14 @@ const router = createBrowserRouter([
     element: <DetailComunity />,
   },
   {
-    path: "/blog",
+    path: "routes/BlogPage",
     element: <BlogPage />,
   },
+  {
+    path: "routes/PopUp",
+    element: <PopUp />,
+  },
+ 
   {
     path: "/artikel",
     element: <ArticlePage />,
