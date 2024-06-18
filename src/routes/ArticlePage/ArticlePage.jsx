@@ -35,6 +35,17 @@ export default function ArticlePage() {
 
   }, []);
 
+  //* HANDLE SEARCH
+  const handleSearch = (searchInput) => {
+    //TODO get article based on search input
+    axios.get(`${serverURL}/articles/search?search=${searchInput}`)
+    
+    //TODO save the result article to the state variable
+    .then((response) => {
+      setListArticle(response.data)
+    })
+  };
+
   return (
     <>
       <Header />
@@ -52,11 +63,17 @@ export default function ArticlePage() {
       <section className={styles.newest_container}>
         <div className={styles.search_container}>
           <h2>Artikel Terbaru</h2>
-          <SearchBar/>
+          <SearchBar handleSearch={handleSearch}/>
         </div>
-        <div className={styles.newest_article_container}>
+        {(listArticle.length > 0)? (
+          <div className={styles.newest_article_container}>
           {listArticle.map((article, index) => <ArticleWideCard key={index} props={article} />)}
         </div>
+        ) : (
+          <div className={styles.newest_article_container}>
+            <p className={styles.no_article}>Artikel tidak ditemukan</p>
+          </div>
+        )}
       </section>
       <section className={styles.tranding_container}>
         <h2>Trending Artikel</h2>

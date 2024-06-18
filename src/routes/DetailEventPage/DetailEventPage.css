@@ -1,0 +1,146 @@
+/* hero */
+
+.acara .hero h1{
+    font-size: 80px;
+    font-weight: 700;
+}
+
+
+
+.acara .detail {
+    display: flex;
+    align-items: center;
+  }
+  
+  .acara .detail i{
+    margin-right: 10px;
+  }
+   /* hero end */
+
+  /* detail acara  */
+  .acara .desk h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+  .acara .desk .col .detail{
+    color: #000;
+    font-size: 20px;
+  }
+ 
+  .acara .desk .col .deskp{
+    color: #5E5E5E;
+    font-size: 20px;
+  }
+
+   /* detail acara end */
+
+   /* galeri */
+
+  .acara .galeri{
+    background: #EDF3F4;
+  }
+
+  .acara .galeri h1{
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .acara .galeri .row:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+  }
+
+  .acara .galeri .row:nth-child(2) .col{
+    padding: 0;
+  }
+
+ .acara .galeri .row:nth-child(2) img{
+    height: 300px;
+ }
+    /* galeri end */
+
+ /* jadwal acara  */
+.schedule-section{
+  padding-bottom: 5rem;
+}
+
+.schedule h1 {
+  font-weight: 700;
+}
+
+.schedule-container .time{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.schedule-container{
+  padding-bottom: 1rem;
+}
+
+.schedule-container p{
+  font-size: 36px;
+  font-weight: 600;
+  color: #5E5E5E;
+}
+
+.schedule-container .time p{
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 30px;
+  color: #000;
+}
+
+.schedule-container .time img{
+  width: 20px;
+}
+/* jadwal acara end */
+
+/* Simpan Acara  */
+.reminder {
+  background-color: #EDF3F4;
+  padding-bottom: 3rem;
+}
+
+.reminder h2{
+  padding: 5rem 0 1rem 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.reminder p{
+  color: #5E5E5E;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.acara .simpan{
+    background: #ccbdbd;
+}
+
+.acara .simpan h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.acara .simpan p{
+    color: #5E5E5E;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.acara .simpan .btn-transparent{
+    background-color: transparent;
+    border: 1px solid #dc3545; 
+    color: #dc3545; 
+}
+
+.acara .simpan .btn-transparent:hover{
+    background-color: rgba(220, 53, 69, 0.1); 
+}
+
+
+ /* Simpan Acara end */

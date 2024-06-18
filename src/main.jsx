@@ -4,16 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home/Home.jsx";
-import Login from "./routes/loginregis/Login.jsx";
-import Regis from "./routes/loginregis/Regis.jsx";
 import UserProfile from "./routes/UserProfile/UserProfile.jsx";
+import LoginPage from "./routes/LoginPage/LoginPage.jsx";
+import RegisPage from "./routes/RegisPage/RegisPage.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
 import BlogPage from "./routes/BlogPage.jsx";
 import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
-import Calender from "./routes/Calender.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
+import DetailEventPage from './routes/DetailEventPage/DetailEventPage.jsx';
+import EventPage from "./routes/EventPage/EventPage.jsx";
 
 
 
@@ -24,11 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <LoginPage />,
   },
   {
     path: "/regis",
-    element: <Regis />,
+    element: <RegisPage/>,
   },
   {
     path: "/user",
@@ -55,13 +56,17 @@ const router = createBrowserRouter([
     element: <DetailArticle />,
   },
   {
-    path: "/kalender",
-    element: <Calender />,
+    path: "/acara",
+    element: <EventPage />,
   },
   {
     path: "/tentang_kami",
     element: <TentangKamiPage />
-  }
+  },
+  {
+    path: "/acara/:id",
+    element: <DetailEventPage/>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

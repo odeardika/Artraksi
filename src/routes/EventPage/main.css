@@ -1,0 +1,152 @@
+.event .upcoming-event h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.upcoming-event {
+    padding: 32px 5rem;
+}
+
+.upcoming-event-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 64px;
+}
+
+
+.event-list-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    gap: 64px;
+    padding-bottom: 2rem;
+}
+
+.event-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+}
+
+.event-container img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.event-container h5{
+    font-size: 24px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event-container .event-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.event-container .event-detail p{
+    margin: 0;
+}
+
+.next_arrow {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.next {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #23766C;
+    transition: all 0.5s ease;
+}
+    
+.next:hover {
+    color: #65CCB7;
+    font-size: 25px;
+}
+.event-list-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+}
+
+/* acara */
+.event .acara{
+    background: #EDF3F4;
+}
+.event .acara h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    
+   
+}
+
+.event .search-container {
+    display: flex;
+    align-items: left;
+    margin-top: 20px;
+    
+}
+
+.event .search-input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+}
+
+
+
+
+.event .acara .row:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-inline: 10px;
+}
+
+.event .acara .row:nth-child(2) .col{
+    background: #EDF3F4;
+    padding: 0;
+}
+
+.event .acara .row:nth-child(2) img{
+    height: 300px;
+}
+
+.event .acara .row:nth-child(2) h5{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.event .acara .row:nth-child(2) .ket{
+    line-height: 10px;
+    font-size: 18px;
+}
+
+.event .acara .row:nth-child(2) .btn-transparent-custom {
+    background: none;
+    border: none;
+    color: inherit; /* Atur warna teks sesuai dengan konteksnya */
+    cursor: pointer;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(121, 116, 110);
+}
+@media screen and (max-width: 992px) {
+    .event .acara .row:nth-child(1) col{
+        justify-content: center; /* Pusatkan elemen pencarian */
+    }
+}
