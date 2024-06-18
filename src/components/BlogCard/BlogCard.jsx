@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BlogCard.module.css';
-import likeIcon from '../../assets/icon/like.svg';
+import likeIcon from '../../assets/icon/like/off.svg';
 import commentIcon from '../../assets/icon/comment.svg';
 import sendIcon from '../../assets/icon/send.svg';
 import seenIcon from '../../assets/icon/seen.svg';

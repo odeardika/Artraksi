@@ -28,7 +28,6 @@
         padding-top: 0; /* Hapus padding atas */
         padding-bottom: 0; /* Hapus padding bawah */
         min-height: 58vh; /* Ubah tinggi minimum elemen hero */
-       
     }
 
     .tentangpage .hero h1 {
@@ -48,7 +47,6 @@
         background-size: cover; /* Pastikan gambar tidak terpotong */
         padding-top: 0; /* Hapus padding atas */
         padding-bottom: 0; /* Hapus padding bawah */
-       
         min-height: 45vh; /* Ubah tinggi minimum elemen hero */
     }
 
