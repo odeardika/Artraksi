@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home/Home.jsx";
+import UserProfile from "./routes/UserProfile/UserProfile.jsx";
 import LoginPage from "./routes/LoginPage/LoginPage.jsx";
 import RegisPage from "./routes/RegisPage/RegisPage.jsx";
 import ComunityPage from "./routes/ComunityPage/ComunityPage.jsx";
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/regis",
     element: <RegisPage/>,
+  },
+  {
+    path: "/user",
+    element: <UserProfile />,
   },
   {
     path: "/komunitas",

@@ -1,0 +1,288 @@
+/*sisi kiri*/
+.main {
+    padding: 3rem 0rem 1rem 4rem;
+}
+.main h2{
+    font-size: 64px;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+.main h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+.main p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.navtabmain {
+    padding: 3rem 0rem 0rem 0rem;
+    border-bottom: 4px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.navtabmain li {
+    margin-bottom: -2.6px;
+    border-bottom: 2px solid #ccc;
+    display: grid;
+    grid-gap: 10px;
+}
+.navtabmain li a {
+    color: #ccc;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: -2.5px;
+    border-bottom: 3px solid #ccc;
+    padding: 0px 5px 0px 5px;
+    margin-right: 30px;
+}
+.navtabmain li a:hover {
+    font-size: 32px;
+    font-weight: 500;
+    color: #287573;
+    border-bottom: #287573 3px solid;
+}
+.navtabmain li a.active {
+    font-size: 32px;
+    font-weight: 500;
+    color: #184A48;
+    border-bottom: #184A48 3px solid;
+}
+
+/*card main*/
+.artikel-item{
+    border: #ccc 2px solid;
+    border-radius: 15px ;
+    padding: 10px;
+    margin-bottom: 13px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+.artikel-item p{
+    padding:  0px;
+}
+.artikel-item:hover{
+    transform: scale(1.02); 
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25); 
+}
+
+/*card blog main*/
+.blog{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 10px)); 
+    gap: 20px; 
+}
+.blog-item{
+    border: #ccc 2px solid;
+    border-radius: 15px ;
+    min-width: 300px;
+    width: 320px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+.blog-item p{
+    padding:  0px;
+}
+
+.blog-item:hover{
+    transform: scale(1.02); 
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25); 
+}
+
+
+/*card acara main*/
+.acara{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 10px)); 
+    gap: 15px; 
+
+}
+.acara-item{
+    border: #ccc 2px solid;
+    min-width: 300px;
+    width: 320px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+.acara-item p{
+    padding:  0px;
+}
+
+.acara-item:hover{
+    transform: scale(1.02); 
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25); 
+}
+
+/*sisi kanan*/
+.card {
+    height: 100%;
+    border-top: none;  
+    border-right: none;         
+    border-bottom: none;        
+    border-left: 4px solid #ccc;
+    border-radius: 0%;
+    padding: 3rem;
+}
+.card h5{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+.card p{
+    font-size: 30px;
+}
+.btn-danger {
+    border: none;
+    background-color: rgb(235, 2, 2);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .main {
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
+    .main h2{
+        font-size: 55px;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        height: 100%;
+        border-top: 4px solid #ccc;  
+        border-right: none;         
+        border-bottom: none;        
+        border-left: none;
+        border-radius: 0%;
+        padding: 2rem;
+    }
+    .card h5{
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+    }
+    .card p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 772px) {
+    .main {
+        padding: 2.5rem 2rem 0.8rem 2rem;
+    }
+    .main h2{
+        font-size: 55px;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        height: 100%;
+        border-top: 4px solid #ccc;  
+        border-right: none;         
+        border-bottom: none;        
+        border-left: none;
+        border-radius: 0%;
+        padding: 2rem;
+    }
+    .card h5{
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+    }
+    .card p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .main {
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
+    .main h2{
+        font-size: 55px;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        height: 100%;
+        border-top: 4px solid #ccc;  
+        border-right: none;         
+        border-bottom: none;        
+        border-left: none;
+        border-radius: 0%;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    .card h5{
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+    }
+    .card p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 474px) {
+    .main {
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
+    .main h2{
+        font-size: 55px;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        height: 100%;
+        border-top: 4px solid #ccc;  
+        border-right: none;         
+        border-bottom: none;        
+        border-left: none;
+        border-radius: 0%;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    .card h5{
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+    }
+    .card p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .main {
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
+    .main h2{
+        font-size: 55px;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        height: 100%;
+        border-top: 4px solid #ccc;  
+        border-right: none;         
+        border-bottom: none;        
+        border-left: none;
+        border-radius: 0%;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    .card h5{
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+    }
+    .card p{
+        font-size: 30px;
+    }
+}
