@@ -17,6 +17,8 @@ import PopUp from "./routes/BlogPage/PopUp.jsx";
 // import App from "./routes/BlogPage/App.jsx";
 import DetailEventPage from './routes/DetailEventPage/DetailEventPage.jsx';
 import EventPage from "./routes/EventPage/EventPage.jsx";
+import DetailBlog from "./routes/DetailBlog/DetailBlog.jsx";
+
 
 
 
@@ -50,10 +52,12 @@ const router = createBrowserRouter([
     element: <BlogPage />,
   },
   {
+    path: "routes/Detailblog",
+    element: <DetailBlog />,
+  },
     path: "routes/PopUp",
     element: <PopUp />,
   },
- 
   {
     path: "/artikel",
     element: <ArticlePage />,
