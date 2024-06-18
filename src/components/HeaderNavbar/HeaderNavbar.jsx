@@ -6,14 +6,26 @@ import ProfilePreview from '../ProfilePreview/ProfilePreview';
 import dropdownDefaultIcon from '../../assets/icon/arrow-down/arrow-down.svg';
 import dropdownHoverIcon from '../../assets/icon/arrow-down/arrow-down-hover.svg';
 import dropdownOpenIcon from '../../assets/icon/arrow-down/arrow-up.svg';
-import profile from '../../assets/user/0.png'
+import axios from 'axios';
 
 
 export default function HeaderNavbar() {
   const [dropdownIcon, setDropdownIcon] = React.useState(dropdownDefaultIcon);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
-  const [profilePicture, setProfilePicture] = React.useState(JSON.parse(localStorage.getItem('profile')));
+  const [profilePicture, setProfilePicture] = React.useState("");
 
+  React.useEffect(() => {
+    if(!JSON.parse(sessionStorage.getItem('token'))) return;
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/user/profile`, {
+      headers: {
+        'Authorization' : JSON.parse(sessionStorage.getItem('token'))
+      }
+    }).then((res) => {
+      setProfilePicture(res.data.profile_img);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }, []);
   const handleMouseEnter = () => {
     if(!isDropdownOpen){
       setDropdownIcon(dropdownHoverIcon);
