@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row,Col } from "react-bootstrap";
 import './main.css';
-import user1 from "../../assets/blog/user-1.png";
-import user2 from "../../assets/blog/user-2.png";
-import user3 from "../../assets/blog/user-3.png";
-import user4 from "../../assets/blog/user-4.png";
-import user5 from "../../assets/blog/user-5.png";
+// import user1 from "../../assets/blog/user-1.png";
+// import user2 from "../../assets/blog/user-2.png";
+// import user3 from "../../assets/blog/user-3.png";
+// import user4 from "../../assets/blog/user-4.png";
+// import user5 from "../../assets/blog/user-5.png";
 
 const comments = [
   {
@@ -13,28 +13,28 @@ const comments = [
     name: 'Stephen Matthews',
     comment: 'Wah, jadi ingin coba nonton juga. Terima kasih untuk tipsnya!',
     likes: 100,
-    image: user2,
+    // image: user2,
   },
   {
     id: 2,
     name: 'Alan Garza',
     comment: 'Silahkan di coba untuk menonton.',
     likes: 100,
-    image: user3,
+    // image: user3,
   },
   {
     id: 3,
     name: 'Kathy Rogers',
     comment: 'Cerita yang sangat keren! Pengalaman yang sangat menginspirasi.',
     likes: 100,
-    image: user4,
+    // image: user4,
   },
   {
     id: 4,
     name: 'Bob Alexander',
     comment: 'Saya pernah nonton sekali, dan itu memang luar biasa.',
     likes: 100,
-    image: user5,
+    // image: user5,
   }
 ];
 
@@ -58,7 +58,7 @@ const CommentSection = () => {
       <div className='comments'>
         {comments.map(comment => (
           <div key={comment.id} className='comment'>
-            <img src={comment.image} alt={comment.name} />
+            {/* <img src={comment.image} alt={comment.name} /> */}
             <div className='comment-content'>
               <div className='comment-header'>
                 <h4>{comment.name}</h4>

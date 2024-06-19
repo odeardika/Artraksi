@@ -1,5 +1,7 @@
 /* hero */
-
+.acara {
+  display: inline-block;
+}
 .acara .hero h1{
     font-size: 80px;
     font-weight: 700;

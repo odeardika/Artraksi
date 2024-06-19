@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
 import { ProfilUser } from './index';
 import "./main.css"
-import hero1 from "../../assets/blog/hero.png"
+// import hero1 from "../../assets/blog/hero.png"
 import CommentSection from './ComentSection.jsx';
 import { BlogDetail } from './index';
 
@@ -35,7 +35,7 @@ const DetailBlog = () => {
             <Container>
                 <Row >
                     <Col>
-                    <img src={hero1} alt="" />
+                    {/* <img src={hero1} alt="" /> */}
                     </Col>
                 </Row>
             </Container>

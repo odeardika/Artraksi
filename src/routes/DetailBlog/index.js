@@ -1,21 +1,21 @@
-import ProfilImage from "../../assets/blog/profil-1.png";
+// import `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png` from "../../assets/blog/profil-1.png";
 
 
-import BlogImage1 from "../../assets/blog/blog-1.png";
-import BlogImage2 from "../../assets/blog/blog-2.png";
-import BlogImage3 from "../../assets/blog/blog-3.png";
-import BlogImage4 from "../../assets/blog/blog-4.png";
-import BlogImage5 from "../../assets/blog/blog-5.png";
-import BlogImage6 from "../../assets/blog/blog-6.png";
+// import BlogImage1 from "../../assets/blog/blog-1.png";
+// import BlogImage2 from "../../assets/blog/blog-2.png";
+// import BlogImage3 from "../../assets/blog/blog-3.png";
+// import BlogImage4 from "../../assets/blog/blog-4.png";
+// import BlogImage5 from "../../assets/blog/blog-5.png";
+// import BlogImage6 from "../../assets/blog/blog-6.png";
 
 
 
-import profilsimage2 from "../../assets/blog/profil-2.png";
-import profilsimage3 from "../../assets/blog/profil-3.png";
-import profilsimage4 from "../../assets/blog/profil-4.png";
-import profilsimage5 from "../../assets/blog/profil-5.png";
-import profilsimage6 from "../../assets/blog/profil-6.png";
-import profilsimage7 from "../../assets/blog/profil-7.png";
+// import profilsimage2 from "../../assets/blog/profil-2.png";
+// import profilsimage3 from "../../assets/blog/profil-3.png";
+// import profilsimage4 from "../../assets/blog/profil-4.png";
+// import profilsimage5 from "../../assets/blog/profil-5.png";
+// import profilsimage6 from "../../assets/blog/profil-6.png";
+// import profilsimage7 from "../../assets/blog/profil-7.png";
 
 
 
@@ -24,7 +24,7 @@ import profilsimage7 from "../../assets/blog/profil-7.png";
 export const ProfilUser = [
     {
         id : 1,
-        image : ProfilImage,
+        image : `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
         user : "Alan Garza",
         follow : "Ikuti",
         status : "Penulis Artikel",
@@ -38,10 +38,10 @@ export const ProfilUser = [
 export const BlogDetail = [
     {
      id: 1,
-     profil: profilsimage2,
+     profil: `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
      name: "Alan Garza",
      status: "ikuti",
-     image: BlogImage1,
+     image: `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
      icon1: "fa-regular fa-heart",
      icon2: "fa-regular fa-comment",
      icon3: "fa-solid fa-share",
@@ -55,10 +55,10 @@ export const BlogDetail = [
     },
     {
      id: 2,
-     profil: profilsimage3,
+     profil: `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
      name: "Alan Garza",
      status: "ikuti",
-     image: BlogImage2,
+     image: `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
      icon1: "fa-regular fa-heart",
      icon2: "fa-regular fa-comment",
      icon3: "fa-solid fa-share",
@@ -72,10 +72,10 @@ export const BlogDetail = [
     },
     {
      id: 3,
-     profil: profilsimage4,
+     profil: `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
      name: "Alan Garza",
      status: "ikuti",
-     image: BlogImage3,
+     image: `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
      icon1: "fa-regular fa-heart",
      icon2: "fa-regular fa-comment",
      icon3: "fa-solid fa-share",
@@ -89,10 +89,10 @@ export const BlogDetail = [
     },
     {
      id: 4,
-     profil: profilsimage5,
+     profil: `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
      name: "Alan Garza",
      status: "ikuti",
-     image: BlogImage4,
+     image: `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
      icon1: "fa-regular fa-heart",
      icon2: "fa-regular fa-comment",
      icon3: "fa-solid fa-share",
@@ -106,10 +106,10 @@ export const BlogDetail = [
     },
     {
      id: 5,
-     profil: profilsimage6,
+     profil: `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
      name: "Alan Garza",
      status: "ikuti",
-     image: BlogImage5,
+     image: `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
      icon1: "fa-regular fa-heart",
      icon2: "fa-regular fa-comment",
      icon3: "fa-solid fa-share",
@@ -123,10 +123,10 @@ export const BlogDetail = [
     },
     {
      id: 6,
-     profil: profilsimage7,
+     profil: `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`,
      name: "Alan Garza",
      status: "ikuti",
-     image: BlogImage6,
+     image: `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
      icon1: "fa-regular fa-heart",
      icon2: "fa-regular fa-comment",
      icon3: "fa-solid fa-share",

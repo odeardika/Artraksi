@@ -36,7 +36,7 @@ const router = createBrowserRouter([
     element: <RegisPage/>,
   },
   {
-    path: "/user",
+    path: "/profile",
     element: <UserProfile />,
   },
   {
@@ -55,6 +55,7 @@ const router = createBrowserRouter([
     path: "routes/Detailblog",
     element: <DetailBlog />,
   },
+  {
     path: "routes/PopUp",
     element: <PopUp />,
   },

@@ -1,64 +1,29 @@
-import React, { useState } from 'react';
-import HeaderNavbar from "../../components/HeaderNavbar/HeaderNavbar";
-import ArticleCard from '../../components/ArticleCard/ArticleCard';
-import BlogCard from '../../components/BlogCard/BlogCard';
+import React, { useState, useEffect } from 'react';
 import Footer from "../../components/FooterComponent/FooterComponent";
-import styles from "./UserProfile.module.css";
 import "./UserProfile.css"
-import { Row } from 'react-bootstrap';
+import Header from '../../components/Header/Header';
+import axios from 'axios';
 
 export default function UserProfile() {
 
     const [activeTab, setActiveTab] = useState('artikel');
-    const [artikel, setArtikel] = useState([
-        {
-        id: 1,
-        judul: 'Tari Incling: Gemerlap Tradisi dan Dinamika Budaya',
-        isi: 'Tari Incling adalah salah satu tarian tradisional yang berasal dari Yogyakarta, dikenal karena keunikannya yang mencerminkan dinamika dan...',
-        },
-        {
-        id: 2,
-        judul: 'Menjelajahi Keindahan Alam Bromo Tengger Semeru',
-        isi: 'Gunung Bromo Tengger Semeru adalah salah satu destinasi wisata alam yang paling populer di Indonesia...',
-        },
-    ]);
-    const [blog, setBlog] = useState([
-        {
-        id: 1,
-        judul: 'Tips Memasak Nasi Goreng yang Lezat dan Mudah',
-        isi: 'Nasi goreng adalah salah satu makanan favorit masyarakat Indonesia...',
-        },
-        {
-        id: 2,
-        judul: '5 Film Indonesia Terbaik Sepanjang Masa',
-        isi: 'Indonesia memiliki banyak film berkualitas yang patut ditonton...',
-        },
-        {
-        id: 3,
-        judul: 'Mengapa Bumi Tidak Berbentuk Donat',
-        isi: 'jelaslah bahwa Bumi tidak berbentuk donat. Bentuk Bumi yang sebenarnya adalah bulat pipih atau oblate spheroid, yang disebabkan oleh gaya gravitasi dan rotasi Bumi...',
-        },
-    ]);
-    const [acara, setAcara] = useState([
-        {
-        id: 1,
-        judul: 'Konser Musik Indie di Yogyakarta',
-        tanggal: '2024-06-15',
-        tempat: 'Jalan Malioboro, Yogyakarta',
-        },
-        {
-        id: 2,
-        judul: 'Seminar Penting tentang Kewirausahaan',
-        tanggal: '2024-06-20',
-        tempat: 'Universitas Gadjah Mada, Yogyakarta',
-        },
-        {
-        id: 3,
-        judul: 'Seminar parenting keluarga superhero',
-        tanggal: '2027-06-20',
-        tempat: 'Bumi',
-        },
-    ]);
+    const [user, setUser] = useState({});
+    const [artikel, setArtikel] = useState([]);
+    const [blog, setBlog] = useState([]);
+    const [acara, setAcara] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${import.meta.env.VITE_SERVER_URL}/user/details`, {
+            headers: {
+                Authorization: JSON.parse(sessionStorage.getItem('token')),
+            },
+        }).then((response) => {
+            console.log(response.data);
+            setUser(response.data.user);
+            setAcara(response.data.remainded_event);
+            setArtikel(response.data.favorite_article);
+        });
+    }, []);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -108,11 +73,7 @@ export default function UserProfile() {
     return (
         <>
         {/* header with backgroud */}
-        <header className={styles.header_blog}>
-            <nav className={styles.header_navbar}>
-            <HeaderNavbar/>
-            </nav>
-        </header>
+        <Header/>
 
         {/*main*/}
         <div className="row">
@@ -138,9 +99,9 @@ export default function UserProfile() {
             <div className="col-lg-4">
                 <div className="card">
                     <div className="text-center">
-                        <img src="https://placehold.co/150x150" alt="Foto Profil" className="img-thumbnail rounded-circle" />
-                        <h5 className="mt-3">Nama Pengguna</h5>
-                        <p className="text-muted">example@email.com</p>
+                        <img src={`${import.meta.env.VITE_SERVER_URL}/${user.profile_img}`} alt="Foto Profil" className="img-thumbnail rounded-circle" />
+                        <h5 className="mt-3">{user.username}</h5>
+                        <p className="text-muted">{user.email}</p>
                         <button className="btn btn-danger btn-block mt-4">Keluar</button>
                     </div>
                 </div>

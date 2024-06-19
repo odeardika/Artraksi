@@ -8,9 +8,9 @@ import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import ComunitySectionImg from '../../assets/homepage-comunity.png'
 import ComunityInfoCard from "../../components/ComunityInfoCard.jsx/ComunityInfoCard";
 import BlogCard from "../../components/BlogCard/BlogCard";
-import blog0 from "../../assets/blog/0.png";
-import blog1 from "../../assets/blog/1.png";
-import blog2 from "../../assets/blog/2.png";
+// import blog0 from "../../assets/blog/0.png";
+// import blog1 from "../../assets/blog/1.png";
+// import blog2 from "../../assets/blog/2.png";
 import user0 from "../../assets/user/0.png";
 import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
@@ -24,9 +24,9 @@ import { Container, Row, Col } from "react-bootstrap";
 const blog = [
   {
     id : 0,
-    by : ["Alan Garza", user0],
+    by : ["Alan Garza", `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`],
     title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
-    img : blog0,
+    img : `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
     content : [
       {
         text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
@@ -36,9 +36,9 @@ const blog = [
   },
   {
     id : 1,
-    by : ["Stephen Matthews", user1],
+    by : ["Stephen Matthews", `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`],
     title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
-    img : blog1,
+    img : `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
     content : [
       {
         text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
@@ -48,9 +48,9 @@ const blog = [
   },
   {
     id : 2,
-    by : ["Bob Alexander", user2],
+    by : ["Bob Alexander", `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`],
     title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
-    img : blog2,
+    img : `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
     content : [
       {
         text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
