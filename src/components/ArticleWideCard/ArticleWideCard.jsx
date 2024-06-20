@@ -8,7 +8,7 @@ import likeIconOff from '../../assets/icon/like/off.svg';
 import likeIconOn from '../../assets/icon/like/on.svg';
 import axios from 'axios';
 
-export default function ArticleWideCard({props}) {
+export default function ArticleWideCard({props, customClass}) {
     const serverURL = import.meta.env.VITE_SERVER_URL;
     const href = `${import.meta.env.VITE_WEBSITE_URL}/artikel/${props.id}`;
     const [isFavorite, setIsFavorite] = React.useState(true);
@@ -72,7 +72,7 @@ export default function ArticleWideCard({props}) {
     }
   return (
     <>
-        <article className={styles.container}>
+        <article className={`${styles.container} ${customClass}`}>
             <div>
                 <a href={href}><img src={`${serverURL}/${props.thumbnail_img}`} className={styles.thumbnail_img} alt={`${props.title} image`} /></a>
             </div>

@@ -22,6 +22,7 @@ export default function DetailArticle() {
         axios.get(`${backendURL}/articles/${id}`)
         .then((response) => {
             setArticle(response.data);
+            console.log(response.data);
             setLike(response.data.likes);
             //* check if user logined
             if(!JSON.parse(sessionStorage.getItem('token'))) return setIsFavorite(false);

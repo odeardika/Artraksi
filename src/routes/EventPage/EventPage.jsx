@@ -46,7 +46,7 @@ export default function EventPage() {
   return (
     <>
       <Header />
-      <div className="event">
+      <div className="event-page">
         <section className="upcoming-event">
           <Container>
             <Row>

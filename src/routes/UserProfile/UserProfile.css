@@ -1,6 +1,6 @@
 /*sisi kiri*/
 .main {
-    padding: 3rem 0rem 1rem 4rem;
+    padding: 32px 5rem;
 }
 .main h2{
     font-size: 64px;
@@ -51,15 +51,32 @@
     border-bottom: #184A48 3px solid;
 }
 
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+}
 /*card main*/
 .artikel-item{
-    border: #ccc 2px solid;
+    /* border: #ccc 2px solid; */
     border-radius: 15px ;
     padding: 10px;
+    margin: 0;
     margin-bottom: 13px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
 }
+
+.artikel-item h3{
+    font-size: 22px;
+}
+
+.artikel-item p{
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .artikel-item p{
     padding:  0px;
 }
@@ -95,28 +112,62 @@
 
 
 /*card acara main*/
-.acara{
+.event{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 10px)); 
-    gap: 15px; 
-
-}
-.acara-item{
-    border: #ccc 2px solid;
-    min-width: 300px;
-    width: 320px;
-    height: 240px;
-    padding: 10px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease;
-}
-.acara-item p{
-    padding:  0px;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    gap: 16px;
 }
 
-.acara-item:hover{
-    transform: scale(1.02); 
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25); 
+.event-container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.event-container-card img{
+    width: auto;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-container-card h5{
+    font-size: 24px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.event-container-card .event-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.event-container-card .event-detail p{
+    margin: 0;
+}
+
+.next_arrow {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.next {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    color: #23766C;
+    transition: all 0.5s ease;
+}
+    
+.next:hover {
+    color: #65CCB7;
+    transform: scale(1.2) translateX(20px);
 }
 
 /*sisi kanan*/
@@ -139,6 +190,46 @@
 .btn-danger {
     border: none;
     background-color: rgb(235, 2, 2);
+}
+
+.edit-profile{
+    position: relative;
+    display: flex;
+    height : 9rem;
+    align-items: center;
+    justify-content: center;
+}
+.edit-profile img{
+    position: absolute;
+    width: 150px;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+
+}
+.edit-profile .profile-hover {
+    filter: brightness(0.8);
+}
+
+.edit-profile label {
+    position: absolute;
+    cursor: pointer;
+    border: solid 2px #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.edit-profile label:hover {
+    cursor: pointer;
+}
+
+.edit-profile .none {
+    display: none;
+}
+.text-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Media Queries */
