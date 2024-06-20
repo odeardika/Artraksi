@@ -8,9 +8,6 @@ import ArticleCard from "../../components/ArticleCard/ArticleCard";
 import ComunitySectionImg from '../../assets/homepage-comunity.png'
 import ComunityInfoCard from "../../components/ComunityInfoCard.jsx/ComunityInfoCard";
 import BlogCard from "../../components/BlogCard/BlogCard";
-// import blog0 from "../../assets/blog/0.png";
-// import blog1 from "../../assets/blog/1.png";
-// import blog2 from "../../assets/blog/2.png";
 import user0 from "../../assets/user/0.png";
 import user1 from "../../assets/user/1.png";
 import user2 from "../../assets/user/2.png";
