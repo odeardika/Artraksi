@@ -26,6 +26,8 @@ export default function BlogPage() {
       setNewestBlogs(response.data);
       console.log(response.data);
     })
+
+    
   }, []);
 
   const handleShow = () => setShowPopup(true);

@@ -29,6 +29,14 @@ const DetailBlog = () => {
   }, []);
 
 
+  React.useEffect(() => {
+    axios.put(`${import.meta.env.VITE_SERVER_URL}/blog/view`, {
+      blog_id : id
+    }).then((response) => {
+      console.log(response.data);
+    })
+  }, [])
+
   return (
     <div className='detail'>
       <Header />

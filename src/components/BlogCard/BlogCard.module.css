@@ -83,6 +83,10 @@
     margin: 0;
 }
 
+.like:hover {
+    cursor: pointer;
+}
+
 .blog_detail {
     padding: 0 0.5rem 0 0.5rem;
 }
