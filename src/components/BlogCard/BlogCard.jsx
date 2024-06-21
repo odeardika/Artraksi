@@ -14,7 +14,7 @@ export default function BlogCard({props}) {
     <div className={styles.container}>
         <div className={styles.user_section}>
             <div className={styles.userprofile_container}>
-                <img src={`${import.meta.env.VITE_SERVER_URL}/${props.creator_profile}`} alt="" className={styles.user_profile}/>
+                <img src={`${import.meta.env.VITE_SERVER_URL}/${props.creator_profile}`} alt="user profile" className={styles.user_profile}/>
             </div>
             <h3 className={styles.user_username}>{props.creator_name}</h3>
             
@@ -42,7 +42,7 @@ export default function BlogCard({props}) {
         </div>
 
         <div className={styles.footer}>
-            <Selengkapnya href={`${import.meta.env.VITE_WEBSITE_URL}/artikel/${props.id}`} customStyles={styles.next}/>
+            <Selengkapnya href={`${import.meta.env.VITE_WEBSITE_URL}/blog/${props.id}`} customStyles={styles.next}/>
         </div>
     </div>
 </>

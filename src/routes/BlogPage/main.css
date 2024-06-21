@@ -25,18 +25,6 @@
 
 }
 
-/* .blog-page .trending .row:nth-child(2) .desk{
-    line-height: 25px;
-    font-size: 13px;
-}
-
-.blog-page .trending .row:nth-child(2) .btn-custom {
-    background: none;
-    border: none;
-    color: inherit; 
-    cursor: pointer;
-    padding: 0;
-} */
 
 /* UNTUKMU */
 .blog-page .untukmu{
@@ -58,21 +46,6 @@
 
 }
 
-
-/* .blog-page .untukmu .pilihan h1::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px; 
-    width: 0;
-    height: 9px; 
-    background-color: #216162; 
-    transition: width 0.3s ease; 
-}
-
-.blog-page .untukmu .pilihan h1:hover::after {
-    width: 100%; 
-} */
 
 .newest-blogs{
     display: grid;

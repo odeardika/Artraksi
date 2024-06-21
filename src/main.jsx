@@ -13,8 +13,6 @@ import ArticlePage from "./routes/ArticlePage/ArticlePage.jsx";
 import TentangKamiPage from "./routes/tentangkami/TentangKamiPage.jsx";
 import DetailComunity from "./routes/DetailComunity/DetailComunity.jsx";
 import DetailArticle from "./routes/DetailArticle/DetailArticle.jsx";
-import PopUp from "./routes/BlogPage/PopUp.jsx";
-// import App from "./routes/BlogPage/App.jsx";
 import DetailEventPage from './routes/DetailEventPage/DetailEventPage.jsx';
 import EventPage from "./routes/EventPage/EventPage.jsx";
 import DetailBlog from "./routes/DetailBlog/DetailBlog.jsx";
@@ -52,12 +50,8 @@ const router = createBrowserRouter([
     element: <BlogPage />,
   },
   {
-    path: "routes/Detailblog",
+    path: "/blog/:id",
     element: <DetailBlog />,
-  },
-  {
-    path: "routes/PopUp",
-    element: <PopUp />,
   },
   {
     path: "/artikel",

@@ -85,10 +85,10 @@ function DetailEventPage() {
     
 
   return (
-    <div className='acara'>
+    <div className='event-page'>
         <style>
             {`
-                .acara .hero{
+                .event-page .hero{
                     background-image: linear-gradient(#000000cb,#0000002f), url(${backendURL}/${event.event_thumbnail});
                     background-size: cover;
                     background-position: center;
