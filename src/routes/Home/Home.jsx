@@ -18,44 +18,7 @@ import axios from "axios";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-const blog = [
-  {
-    id : 0,
-    by : ["Alan Garza", `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`],
-    title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
-    img : `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
-    content : [
-      {
-        text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
-        type : "p"
-      }
-    ]
-  },
-  {
-    id : 1,
-    by : ["Stephen Matthews", `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`],
-    title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
-    img : `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
-    content : [
-      {
-        text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
-        type : "p"
-      }
-    ]
-  },
-  {
-    id : 2,
-    by : ["Bob Alexander", `${import.meta.env.VITE_SERVER_URL}/assets/users/default.png`],
-    title : "Pengalaman Menonton Pertunjukan Wayang Kulit di Yogyakarta",
-    img : `${import.meta.env.VITE_SERVER_URL}/assets/blogs/1.png`,
-    content : [
-      {
-        text : "Halo pembaca setia! Kali ini saya ingin berbagi pengalaman yang tak terlupakan saat menonton pertunjukan wayang kulit di Yogyakarta. Sebagai penggemar budaya Jawa, kesempatan ini adalah mimpi yang menjadi kenyataan.",
-        type : "p"
-      }
-    ]
-  },
-]
+
 
 const userFeedback = [
   {id : 0, username : "Alan Garza", content : "Website ini memberikan informasi yang sangat lengkap tentang berbagai kebudayaan di Indonesia. Saya jadi bisa lebih mengenal dan menghargai keberagaman budaya kita.", img : user0, rate : 5},
@@ -65,6 +28,7 @@ const userFeedback = [
 
 export default function Home() {
   const [articles, setArticles] = React.useState([]);
+  const [blogs, setBlogs] = React.useState([]);
 
   React.useEffect(() => {
     axios.get(`${import.meta.env.VITE_SERVER_URL}/articles/top`)
@@ -74,6 +38,11 @@ export default function Home() {
       .catch(err => {
         console.log(err);
       });
+
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/trending/3`)
+    .then(response => {
+      setBlogs(response.data);
+    })
   }
   , []);
 
@@ -164,7 +133,7 @@ export default function Home() {
       <section className={styles.blog_section}>
       <h2>Dapatkan cerita terbaru dari <span>pengguna</span></h2>
       <div className={styles.blog_container}>
-        {blog.map(blogItem => <BlogCard key={blogItem.id} props={blogItem} />)}
+        {blogs.map(blogItem => <BlogCard key={blogItem.id} props={blogItem} />)}
       </div>
     </section>
 

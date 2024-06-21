@@ -18,20 +18,26 @@ export default function BlogPage() {
     axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/trending/3`)
     .then(response => {
       setTrendingBlogs(response.data);
-      console.log(response.data);
     })
 
     axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/newest`)
     .then(response => {
       setNewestBlogs(response.data);
-      console.log(response.data);
     })
-
-    
   }, []);
 
   const handleShow = () => setShowPopup(true);
   const handleClose = () => setShowPopup(false);
+
+  const handleSearch = (searchInput) => {
+    //TODO get blogs based on search input
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/search?search=${searchInput}`)
+    
+    //TODO save the result blogs to the state variable
+    .then((response) => {
+      setNewestBlogs(response.data)
+    })
+  };
 
   return (
     <div className='blog-page'>
@@ -57,7 +63,7 @@ export default function BlogPage() {
       
       <div className='create-blog-button'>
       <button className="create btn" onClick={handleShow}>
-          <i class=" fa-solid fa-pen-fancy me-2"></i> Create
+          <i className=" fa-solid fa-pen-fancy me-2"></i> Create
       </button>
       </div>
 
@@ -66,19 +72,25 @@ export default function BlogPage() {
           <div>
               <div className='heading '>
                 <h1>Blog</h1>
-                <SearchBar />
+                <SearchBar placeholder='Cari Blog' handleSearch={handleSearch}/>
               </div>
           </div>
        
           
             
-          <div className='newest-blogs'>
+          {(newestBlogs.length > 0) ? (
+            <div className='newest-blogs'>
             {newestBlogs.map((data) => {
               return (
                 <BlogCard key={data.id} props={data} />
               );
             })}
           </div>
+          ) : (
+            <div className=''>
+              <p className='blog-not-found'>Blog tidak tersedia</p>
+            </div>
+          )}
         </div>
       </div>
 
