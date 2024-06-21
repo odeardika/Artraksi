@@ -23,7 +23,6 @@ export default function UserProfile() {
                 Authorization: JSON.parse(sessionStorage.getItem('token')),
             },
         }).then((response) => {
-            console.log(response.data);
             setUser(response.data.user);
             setAcara(response.data.remainded_event);
             setArtikel(response.data.favorite_article);
@@ -83,7 +82,6 @@ export default function UserProfile() {
 
     const handleUploadProfileImage = (event) => {
         
-        console.log(event.target.files[0]);
         axios.putForm(`${import.meta.env.VITE_SERVER_URL}/user/profile`, {
             'file' : event.target.files[0]
         },{
@@ -92,7 +90,7 @@ export default function UserProfile() {
                 Authorization: JSON.parse(sessionStorage.getItem('token')),
             },
         }).then((response) => {
-            console.log(response.data);
+            
         })
     };
 
@@ -130,9 +128,6 @@ export default function UserProfile() {
                         <a className={activeTab === 'acara' ? 'active' : ''} href="#" onClick={(e) => handleTabClick('acara', e)}>acara</a>
                     </li>
                 </ul>
-                {/* {activeTab === 'artikel' && artikel.map((artikel) => (
-                    <ArticleWideCard key={artikel.id} props={artikel}/>
-                ))} */}
                 {renderContent()}
                 </div>
             </div>    

@@ -43,7 +43,7 @@ export default function BlogPage() {
             </Col>
           </Row>
           
-          <div className='blog-container'>
+          <div className='blog-container-trending'>
             {trendingBlogs.map((data) => {
               return (
                 <BlogCard key={data.id} props={data} />
