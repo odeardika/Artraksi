@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Footer from "../../components/FooterComponent/FooterComponent";
 import ArticleWideCard from '../../components/ArticleWideCard/ArticleWideCard';
+import BlogCard from '../../components/BlogCard/BlogCard';
 import "./UserProfile.css"
 import Header from '../../components/Header/Header';
 import axios from 'axios';
@@ -23,9 +24,11 @@ export default function UserProfile() {
                 Authorization: JSON.parse(sessionStorage.getItem('token')),
             },
         }).then((response) => {
+            console.log(response.data);
             setUser(response.data.user);
             setAcara(response.data.remainded_event);
             setArtikel(response.data.favorite_article);
+            setBlog(response.data.favorite_blog);
         });
     }, []);
 
@@ -46,12 +49,9 @@ export default function UserProfile() {
         case 'blog':
             return (
             <div className="blog">
-            {blog.map((blog) => (
-            <div key={blog.id} className="blog-item">
-                <h3>{blog.judul}</h3>
-                <p>{blog.isi}</p>
-            </div>
-            ))}
+                {blog.map((blog) => (
+                    <BlogCard key={blog.id} props={blog} customClass={"blog-item"}/>
+                ))}
             </div>
             );
         case 'acara':

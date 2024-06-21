@@ -8,7 +8,7 @@ import seenIcon from '../../assets/icon/seen.svg';
 import Selengkapnya from '../../components/NextButton/Selengkapnya/Selengkapnya';
 import axios from 'axios';
 
-export default function BlogCard({props}) {
+export default function BlogCard({props , customClass}) {
     const [isFavorite, setIsFavorite] = React.useState(false);
     const [likes, setLikes] = React.useState(props.likes);
 
@@ -18,7 +18,7 @@ export default function BlogCard({props}) {
 
 
         //* check if user like the blog
-        axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/check/${props.id}`, {
+        axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/like/check/${props.id}`, {
             headers: {
                 Authorization: JSON.parse(sessionStorage.getItem('token'))
             }
@@ -72,7 +72,7 @@ export default function BlogCard({props}) {
 
   return (
     <>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${customClass}`}>
         <div className={styles.user_section}>
             <div className={styles.userprofile_container}>
                 <img src={`${import.meta.env.VITE_SERVER_URL}/${props.creator_profile}`} alt="user profile" className={styles.user_profile}/>
