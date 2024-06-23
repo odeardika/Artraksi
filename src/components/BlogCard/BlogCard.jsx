@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './BlogCard.module.css';
 import likeIconOff from '../../assets/icon/like/off.svg';
 import likeIconOn from '../../assets/icon/like/on.svg';
@@ -11,6 +12,8 @@ import axios from 'axios';
 export default function BlogCard({props , customClass}) {
     const [isFavorite, setIsFavorite] = React.useState(false);
     const [likes, setLikes] = React.useState(props.likes);
+
+    const navigate = useNavigate();
 
     React.useEffect(() => {
         //* check if user logined
@@ -103,7 +106,7 @@ export default function BlogCard({props , customClass}) {
         </div>
 
         <div className={styles.footer}>
-            <Selengkapnya href={`${import.meta.env.VITE_WEBSITE_URL}/blog/${props.id}`} customStyles={styles.next}/>
+            <Selengkapnya href={`/blog/${props.id}`} customStyles={styles.next}/>
         </div>
     </div>
 </>

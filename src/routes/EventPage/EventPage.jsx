@@ -43,6 +43,16 @@ export default function EventPage() {
     })
 
   }, []);
+
+  const handleSearch = (searchInput) => {
+    //TODO get events based on search input
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/events/search?search=${searchInput}`)
+    
+    //TODO save the result events to the state variable
+    .then((response) => {
+      setAllEvents(response.data)
+    })
+  };
   return (
     <>
       <Header />
@@ -82,11 +92,17 @@ export default function EventPage() {
               <Col lg="6 ">
               <h1>Acara</h1>
               </Col>
-              <SearchBar placeholder="Cari Acara"/>
+              <SearchBar placeholder="Cari Acara" handleSearch={handleSearch}/>
             </div>
-            <div className="event-list-container">
+            {(allEvents.length > 0) ? (
+              <div className="event-list-container">
               {allEvents.map((data) => <EventCard key={data.id} props={data}/> )}
             </div>
+            ) : (
+              <div>
+                <p className="event-not-found">Acara tidak ditemukan</p>
+              </div>
+            )}
           </Container>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './HeaderNavbar.module.css';
 import logo from './../../assets/logo/Logo.svg';
 import LoginButton from '../LoginButton/LoginButton';
@@ -13,6 +14,7 @@ export default function HeaderNavbar() {
   const [dropdownIcon, setDropdownIcon] = React.useState(dropdownDefaultIcon);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const [profilePicture, setProfilePicture] = React.useState("");
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     if(!JSON.parse(sessionStorage.getItem('token'))) return;
@@ -64,10 +66,10 @@ export default function HeaderNavbar() {
               </a>
               {isDropdownOpen && (
                 <div className={styles.dropdown_content}>
-                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/artikel`}>artikel</a>
-                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/komunitas`}>komunitas</a>
-                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/blog`}>blog</a>
-                  <a href={`${import.meta.env.VITE_WEBSITE_URL}/acara`}>acara</a>
+                  <a href='' onClick={() => {navigate('/artikel')}}>artikel</a>
+                  <a href={``} onClick={() => {navigate('/komunitas')}}>komunitas</a>
+                  <a href={``} onClick={() => {navigate('/blog')}}>blog</a>
+                  <a href={``} onClick={() => {navigate('/acara')}}>acara</a>
                 </div>
               )}
             </div>
@@ -75,7 +77,7 @@ export default function HeaderNavbar() {
           </li>
 
           <li className={styles.nav_item}>
-            <a className={styles.nav_item_anchor} href={`${import.meta.env.VITE_WEBSITE_URL}/tentang_kami`}>tentang kami</a>
+            <a className={styles.nav_item_anchor} href={``} onClick={() => {navigate('/tentang_kami')}}>tentang kami</a>
           </li>
         </ul>
       </nav>

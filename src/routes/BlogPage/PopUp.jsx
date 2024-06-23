@@ -23,7 +23,6 @@ function PopupOverlay({ show, handleClose }) {
     setFile(event.target.files[0]);
   }
   useEffect(() => {
-    if(!JSON.parse(sessionStorage.getItem('token'))) return navigate('/login');
     axios.get(`${import.meta.env.VITE_SERVER_URL}/user/details`, {
       headers: {
           Authorization: JSON.parse(sessionStorage.getItem('token')),

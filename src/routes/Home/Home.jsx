@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 import "./main.css";
 import HeaderNavbar from "../../components/HeaderNavbar/HeaderNavbar";
@@ -29,6 +30,7 @@ const userFeedback = [
 export default function Home() {
   const [articles, setArticles] = React.useState([]);
   const [blogs, setBlogs] = React.useState([]);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     axios.get(`${import.meta.env.VITE_SERVER_URL}/articles/top`)
@@ -75,7 +77,7 @@ export default function Home() {
                 <p className="mb-4">
                     Telusuri pesona budaya Yogyakarta melalui artikel kami yang mendalam. Temukan cerita-cerita menarik tentang tradisi, seni, dan sejarah yang membentuk identitas unik kota ini. Dari seni wayang hingga keindahan arsitektur kraton, jelajahi dan pahami kekayaan budaya istimewa Yogyakarta.
                 </p>
-                <button className="btn btn-success btn-lg-5">Selengkapnya</button>
+                <button className="btn btn-success btn-lg-5" onClick={() => navigate('/artikel')}>Selengkapnya</button>
             </Col>
         </Row>
     </Container>
@@ -89,7 +91,7 @@ export default function Home() {
                 <p className="mb-4">
                     Temukan komunitas kebudayaan Yogyakarta dan terhubunglah dengan para pecinta budaya lokal. Teman-teman baru dan diskusi yang mendalam tentang seni, tradisi, dan acara budaya. Jadilah bagian dari upaya melestarikan dan memperkenalkan kekayaan budaya istimewa Yogyakarta kepada dunia.
                 </p>
-                <button className="btn btn-success btn-lg-5 mb-3">Selengkapnya</button>
+                <button className="btn btn-success btn-lg-5 mb-3" onClick={() => navigate('/komunitas')}>Selengkapnya</button>
             </Col>
             <Col lg="6" className="text-end">
                 <img src={komunitasMVP} alt="Komunitas Seni Pertunjukan Yogyakarta" className="img-fluid" />

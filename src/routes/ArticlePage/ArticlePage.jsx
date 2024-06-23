@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './ArticlePage.module.css';
 import Header from '../../components/Header/Header';
 import axios from 'axios';
@@ -13,6 +14,8 @@ export default function ArticlePage() {
   const [favoriteArticle, setFavoriteArticle] = useState([]);
   const [listArticle, setListArticle] = useState([]);
   const [trendingArticles, setTrendingArticles] = useState([]);
+
+  const navigate = useNavigate();
 
   const serverURL = import.meta.env.VITE_SERVER_URL;
   const websiteURL = import.meta.env.VITE_WEBSITE_URL;
@@ -57,7 +60,7 @@ export default function ArticlePage() {
           <h3>Paling disukai</h3>
           <h2>{favoriteArticle.title}</h2>
           <p>{favoriteArticle.preview}</p>
-          <Selengkapnya href={`${websiteURL}/artikel/${favoriteArticle.id}`} customStyles={styles.favorite_next} />
+          <Selengkapnya href={`/artikel/${favoriteArticle.id}`} customStyles={styles.favorite_next} />
         </div>
       </div>
       <section className={styles.newest_container}>

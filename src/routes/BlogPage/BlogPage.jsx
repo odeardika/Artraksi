@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
 import './main.css';
-import { TrendingSekarang, UntukmuSekarang } from './index';
 import PopupOverlay from './PopUp';
 import Header from '../../components/Header/Header';
 import FooterComponent from '../../components/FooterComponent/FooterComponent';
@@ -13,6 +13,8 @@ export default function BlogPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [trendingBlogs, setTrendingBlogs] = useState([]);
   const [newestBlogs, setNewestBlogs] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_SERVER_URL}/blog/trending/3`)
@@ -26,7 +28,10 @@ export default function BlogPage() {
     })
   }, []);
 
-  const handleShow = () => setShowPopup(true);
+  const handleShow = () => {
+    if(!JSON.parse(sessionStorage.getItem('token'))) return navigate('/login');
+    setShowPopup(true)
+  };
   const handleClose = () => setShowPopup(false);
 
   const handleSearch = (searchInput) => {

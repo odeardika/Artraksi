@@ -228,6 +228,7 @@ header{
   }
 
   .detailpage .kegiatan .row:nth-child(2) h5{
+    font-size: 32px;
     color: #000;
     font-weight: bold;
     line-height: 1.5;
